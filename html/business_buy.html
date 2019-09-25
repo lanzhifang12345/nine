@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>企业采购</title>
+        <link rel="stylesheet" href="../css/business_buy.css">
+        <link rel="stylesheet" href="../z_iconfont/iconfont.css">
+        <script src="../z_iconfont/iconfont.js"></script>
+        <link rel="stylesheet" href="../css/top.css">
+        <link rel="stylesheet" href="../css/bottom.css">
+        <link rel="stylesheet" href="../c_iconfont/iconfont.css">
+
+        <script src='../js/jquery-3.4.1.js'></script>
+
+        <script>
+            $(function(){
+                // 模块（1）的轮播图
+                var m1_num=0;
+                var m1_timer;
+                function go1(){
+                    m1_timer=setInterval(function(){
+                        m1_num++;
+                        if (m1_num>1) {
+                            m1_num=0;
+                            $('.business-number-lefttotal .wtotal').css('margin-left',-594*m1_num+'px');
+                        }
+                        $('.business-number-lefttotal .wtotal').animate({
+                        'margin-left':-594*m1_num+'px'
+                        },500)
+                        $('.business-number-leftuls2 li').eq(m1_num).attr('class','leftli1').siblings().attr('class',' ');
+                        $('.business-number-lefttotal .wtotal').css('margin-left',-594*m1_num+'px');
+                        return false;
+                        
+                    },3000)
+                }
+                go1();
+                var business_number_leftuls2=document.getElementById('business-number-leftuls2').children;
+                for(var i=0;i<business_number_leftuls2.length;i++){
+                    $("#business-number-leftuls2 li").eq(i).attr('index',i);
+                    $('#business-number-leftuls2 li').mouseenter(function(e) {
+                        var m1_num=$(this).attr('index');
+                        $(this).attr('class','leftli1').siblings().attr('class',' ');
+                        $('.business-number-lefttotal .wtotal').css('margin-left',-594*m1_num+'px');
+                    });
+                }
+                $('.business-number-lefttotal').mouseenter(function(e) {
+                    clearInterval(m1_timer);
+                });
+                $('.business-number-lefttotal').mouseleave(function(e) {
+                    go1();
+                });
+
+
+                // 模块（2）的轮播图
+                var m2_num=0;
+                var m2_timer;
+                function go2(){
+                    m2_timer=setInterval(function(){
+                        m2_num++;
+                        if (m2_num>1) {
+                            m2_num=0;
+                            $('.business-computer-lunbo .m2-uls').css('margin-left',-397*m2_num+'px');
+                            $('.business-computer-llunbo .m2-uls').css('margin-left',-397*m2_num+'px');
+                        }
+                      
+                        $('.business-computer-lunbo .m2-uls').animate({
+                        'margin-left':-397*m2_num+'px'
+                        },100)
+                        $('.business-computer-llunbo .m2-uls').animate({
+                        'margin-left':-397*m2_num+'px'
+                        },100)
+                        $('.m2-ols1 li').eq(m2_num).attr('class','m2-col1').siblings().attr('class',' ');
+                        $('.business-computer-llunbo .m2-uls').css('margin-left',-397*m2_num+'px');
+                        $('.m2-ols li').eq(m2_num).attr('class','m2-col').siblings().attr('class',' ');
+                        $('.business-computer-lunbo .m2-uls').css('margin-left',-397*m2_num+'px');
+                        return false;
+                    },3000)
+                }
+                go2();
+                var m2_ols1=document.getElementById('m2_ols1').children;
+                var m2_ols=document.getElementById('m2_ols').children;
+                for(var i=0;i<m2_ols1.length;i++){
+                    $("#m2_ols1 li").eq(i).attr('index',i);
+                    $('#m2_ols1 li').mouseenter(function(e) {
+                        var b_num=$(this).attr('index');
+                        $(this).attr('class','m2-col1').siblings().attr('class',' ');
+                        $('.business-computer-llunbo .m2-uls').css('margin-left',-397*b_num+'px');
+                    });
+                }
+                for(var j=0;j<m2_ols.length;j++){
+                    $("#m2_ols li").eq(j).attr('index',j);
+                    $('#m2_ols li').mouseenter(function(e) {
+                        var b_num=$(this).attr('index');
+                        console.log(b_num);
+                        $(this).attr('class','m2-col').siblings().attr('class',' ');
+                        $('.business-computer-lunbo .m2-uls').css('margin-left',-397*b_num+'px');
+                    });
+                }
+                $('#m2_box').mouseenter(function(e) {
+                    clearInterval(m2_timer);
+                });
+                $('#m2_box').mouseleave(function(e) {
+                    go2();
+                });
+
+
+                // 模块（3）的轮播图
+                var m3_num=0;
+                var m3_timer;
+                function go3(){
+                    m3_timer=setInterval(function(){
+                        m3_num++;
+                        if (m3_num>1) {
+                            m3_num=0;
+                            $('.business-computer-lunbom3 .m3-uls').css('margin-left',-397*m3_num+'px');
+                            $('.business-computer-lunbom3 .m3-uls').css('margin-left',-397*m3_num+'px');
+                        }
+                      
+                        $('.business-computer-lunbom3 .m3-uls').animate({
+                        'margin-left':-397*m3_num+'px'
+                        },100)
+                        $('.business-computer-llunbom3 .m3-uls').animate({
+                        'margin-left':-397*m3_num+'px'
+                        },100)
+                        $('.m3-ols1 li').eq(m3_num).attr('class','m3-col1').siblings().attr('class',' ');
+                        $('.business-computer-llunbom3 .m3-uls').css('margin-left',-397*m3_num+'px');
+                        $('.m3-ols li').eq(m3_num).attr('class','m3-col').siblings().attr('class',' ');
+                        $('.business-computer-lunbom3 .m3-uls').css('margin-left',-397*m3_num+'px');
+                        return false;
+                    },3000)
+                }
+                go3();
+                var m3_ols1=document.getElementById('m3_ols1').children;
+                var m3_ols=document.getElementById('m3_ols').children;
+                for(var i=0;i<m3_ols1.length;i++){
+                    $("#m3_ols1 li").eq(i).attr('index',i);
+                    $('#m3_ols1 li').mouseenter(function(e) {
+                        var b_num=$(this).attr('index');
+                        $(this).attr('class','m3-col1').siblings().attr('class',' ');
+                        $('.business-computer-llunbom3 .m3-uls').css('margin-left',-397*b_num+'px');
+                    });
+                }
+                for(var j=0;j<m3_ols.length;j++){
+                    $("#m3_ols li").eq(j).attr('index',j);
+                    $('#m3_ols li').mouseenter(function(e) {
+                        var b_num=$(this).attr('index');
+                        console.log(b_num);
+                        $(this).attr('class','m3-col').siblings().attr('class',' ');
+                        $('.business-computer-lunbom3 .m3-uls').css('margin-left',-397*b_num+'px');
+                    });
+                }
+                $('#m3_box').mouseenter(function(e) {
+                    clearInterval(m3_timer);
+                });
+                $('#m3_box').mouseleave(function(e) {
+                    go3();
+                });
+
+
+                // 模块（4）的轮播图
+                var m4_num=0;
+                var m4_timer;
+                function go4(){
+                    m4_timer=setInterval(function(){
+                        m4_num++;
+                        if (m4_num>1) {
+                            m4_num=0;
+                            $('.business-computer-lunbom4 .m4-uls').css('margin-left',-397*m4_num+'px');
+                            $('.business-computer-lunbom4 .m4-uls').css('margin-left',-397*m4_num+'px');
+                        }
+                      
+                        $('.business-computer-lunbom4 .m4-uls').animate({
+                        'margin-left':-397*m4_num+'px'
+                        },100)
+                        $('.business-computer-llunbom4 .m4-uls').animate({
+                        'margin-left':-397*m4_num+'px'
+                        },100)
+                        $('.m4-ols1 li').eq(m4_num).attr('class','m4-col1').siblings().attr('class',' ');
+                        $('.business-computer-llunbom4 .m4-uls').css('margin-left',-397*m4_num+'px');
+                        $('.m4-ols li').eq(m4_num).attr('class','m4-col').siblings().attr('class',' ');
+                        $('.business-computer-lunbom4 .m4-uls').css('margin-left',-397*m4_num+'px');
+                        return false;
+                    },3000)
+                }
+                go4();
+                var m4_ols1=document.getElementById('m4_ols1').children;
+                var m4_ols=document.getElementById('m4_ols').children;
+                for(var i=0;i<m4_ols1.length;i++){
+                    $("#m4_ols1 li").eq(i).attr('index',i);
+                    $('#m4_ols1 li').mouseenter(function(e) {
+                        var b_num=$(this).attr('index');
+                        $(this).attr('class','m4-col1').siblings().attr('class',' ');
+                        $('.business-computer-llunbom4 .m4-uls').css('margin-left',-397*b_num+'px');
+                    });
+                }
+                for(var j=0;j<m4_ols.length;j++){
+                    $("#m4_ols li").eq(j).attr('index',j);
+                    $('#m4_ols li').mouseenter(function(e) {
+                        var b_num=$(this).attr('index');
+                        $(this).attr('class','m4-col').siblings().attr('class',' ');
+                        $('.business-computer-lunbom4 .m4-uls').css('margin-left',-397*b_num+'px');
+                    });
+                }
+                $('#m4_box').mouseenter(function(e) {
+                    clearInterval(m4_timer);
+                });
+                $('#m4_box').mouseleave(function(e) {
+                    go4();
+                });
+
+
+                // 选项卡轮播图
+                var b_num=0;
+                var b_timer;
+                function go(){
+                    b_timer=setInterval(function(){
+                        b_num++;
+                        if(b_num>4){
+                            b_num=0;
+                            $('.business-divbody-culs').css('margin-left',-810*b_num+'px');
+                            b_num=1;
+                        }
+                        $('.business-divbody-culs').animate({
+                            'margin-left':-810*b_num+'px'
+                        }, 300);
+                        $('.business-divbody-center1 ol li').eq(b_num).css('background','white');
+                        $('.business-divbody-center1 ol li').eq(b_num).siblings().css('background','#BBBBBD');
+                    },3000)
+                }
+                go();
+                var business_center1_cl=document.getElementById('business-center1-cl').children;
+                for(var i=0;i<business_center1_cl.length;i++){
+                    $("#business-center1-cl li").eq(i).attr('index',i);
+                    $('#business-center1-cl li').mouseenter(function(e) {
+                        var b_num=$(this).attr('index');
+                        $(this).attr('class','business-center1-current').siblings().attr('class',' ');
+                        $('.business-divbody-culs').css('margin-left',-810*b_num+'px');
+                    });
+                }
+                $('.business-divbody-center1').mouseenter(function(e) {
+                    clearInterval(b_timer);
+                });
+                $('.business-divbody-center1').mouseleave(function(e) {
+                    go();
+                });
+
+            })
+        </script>
+
+    </head>
+    <body style="min-width: 200px;">
+    	<!-- 头部导航条 -->
+    	<div class="container top">
+            <!-- 定位 -->
+            <div class="top_location">
+                <!-- <span class="iconfont icon-shouye shouyesp"></span> -->
+                <span class="iconfont icon-dingwei c_location"></span>
+                <!-- <p class="shouye">京东首页</p> -->
+                <p class="guangdong">广东</p>
+                <div class="top_location_display">
+                    <ul class="top_location_li" style="list-style:none">
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>天津</li>
+                        <li>重庆</li>
+                        <li>河北</li>
+                        <li>山西</li>
+                        <li>河南</li>
+                        <li>辽宁</li>
+                        <li>吉林</li>
+                        <li>黑龙江</li>
+                        <li>内蒙古</li>
+                        <li>江苏</li>
+                        <li>山东</li>
+                        <li>安徽</li>
+                        <li>浙江</li>
+                        <li>福建</li>
+                        <li>湖北</li>
+                        <li>湖南</li>
+                        <li>广东</li>
+                        <li>广西</li>
+                    </ul>
+                    <div class="line1"></div>
+                    <p class="display_p" style="color:#999999;margin-left:20px;font-size: 13px;margin-top: 5px;">地区专享版本<br><br>中国港澳</p>
+                    <div class="line2"></div>
+                    <span class="iconfont icon-global c_global"></span>
+                    <p style="margin-left:50px;margin-top: 30px;font-size:15px;color:#999999;margin-left:20px;margin-top:15px">Available Sites</p>
+                    <p class="globalsite" style="margin-left:50px;margin-top: 13px;font-size:15px;color:#999999">全球网站</p>
+                    <span class="iconfont icon-aodaliya c_australia"></span>
+                    <p class="australia" style="margin-left:185px;margin-top: -20px;font-size:15px;color:#999999">澳大利亚</p>
+                </div>
+            </div>
+            
+            <!-- 登录和注册 -->
+            <a href="" class="top_register">何洛洛yn</a>
+            <span class="iconfont icon-plus plus"></span>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:682px;top:13px"></div>
+            
+            <!-- 我的订单 -->
+            <a href="" class="top_myform">我的订单</a>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:753px;top:13px"></div>
+            
+            <!-- 我的京东 -->
+            <div class="top_myjd_box">
+                <a href="../html/myjingdong.html" class="top_myjd">我的京东</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+                <div class="top_myjd_display">
+                    <ul class="top_myjd_ul" style="list-style:none;" >
+                        <li>待处理订单</li>
+                        <li>消息</li>
+                        <li>返修退换货</li>
+                        <li>我的回答</li>
+                        <li>降价商品</li>
+                        <li>我的关注</li>
+                        <li style="height:10px"><hr style="border:none"></li>
+                        <li style="height:10px"><hr style="border:0.5px solid #F1F1F1;width:280px;margin-left:-137px"></li>
+                        <li>我的京东</li>
+                        <li>我的优惠券</li>
+                        <li>我的白条</li>
+                        <li>我的理财</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:840px;top:13px"></div>
+
+            <!-- 京东会员 -->
+            <a href="../html/membership.html" class="top_vip">京东会员</a>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:914px;top:13px"></div>
+
+            <!-- 企业采购 -->
+            <div class="top_purchase_box">
+                <a href="" class="top_purchase">企业采购</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+                <div class="top_purchase_display">
+                    <ul class="top_purchase_ul" style="list-style:none;" >
+                        <li>企业购</li>
+                        <li>商用场景馆</li>
+                        <li>工业品</li>
+                        <li>礼品卡</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:1000px;top:13px"></div>
+            
+            <!-- 客户服务 -->
+            <div class="top_service_box">
+                <a href="" class="top_service">客户服务</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:78px;top:13px"></div>
+            </div>
+            <!-- 网站导航 -->
+            <div class="top_navigation_box">
+                <a href="" class="top_navigation">网站导航</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:77px;top:13px"></div>
+            </div>
+            <!-- 手机京东 -->
+            <a href="" class="top_phonejd">手机京东</a>
+        </div>
+
+    	<!-- 选择类型 -->
+    	<div class="business-first-div">
+    		<a href="../index.html">
+                <img class="business-first-div-logo" src="../img/z_47fb57b929ebb835.jpg" alt="">      
+            </a>
+
+    		<div id="business-select">
+    			<p>企业购频道</p>
+    			<span class="iconfont icon-f11-copy1 ic-ch"></span>
+    			<div class="ic-ch-sort">
+    				<li>电脑数码企采馆</li>
+    				<li>家电企采馆</li>
+    				<li>手机企采馆</li>
+    				<li>京东超市企采馆</li>
+    				<li>商用场景馆</li>
+    				<li>工业品企采馆</li>
+    				<li>办公家具馆</li>
+    				<li>时尚美妆企采馆</li>
+    				<li>家居企采馆</li>
+    			</div>
+    		</div>
+			<div class="business-intput-div">
+				<input type="text" id="business-intput-input" value="" placeholder="中秋发福季">
+				<div class="business-intput-search"><p>搜索</p></div>
+			</div>
+			
+			<a href="../html/shopping.html" style="text-decoration: none;">
+                <div id="business-myshoppingcart">
+                <p>我的购物车</p>
+                <span class="iconfont icon-gouwuche sh-ch"></span>
+                <div class="sh-ch-sort">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </div>
+            </div>         
+            </a>
+    		<div id="business-scan">
+    			<span class="iconfont icon-erweima scan-ch"></span>
+    			<p class="business-scan-p">扫码享受优惠</p>
+    			<div class="scan-ch-sort">
+    				<img src="../img/z_5bc72784N77e107e5.jpg" alt="">
+    				<div class="scan-ch-text">
+    					<p class="scan-ch-text1">京东企业购</p>
+    					<p class="scan-ch-text2">企业采购多才多惠</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="business-smalldiv">
+				<li class="business-smalldiv-li">高返800E卡</li>
+				<li class="business-smalldiv-li">低至2折</li>
+				<li class="business-smalldiv-li">京东京喜</li>
+				<li class="business-smalldiv-li">物流合作</li>
+				<li class="business-smalldiv-li">0.01元专享</li>
+				<li class="business-smalldiv-li">企业信贷</li>
+			</div>
+    	</div>
+        
+        <!-- 轮播图上面的小div -->
+        <div class="business-smallphone">
+            <div class="business-smallphone1">
+                <li>企业购首页</li>
+                <li>优惠券</li>
+                <li>注册有礼</li>
+                <li>会员中心</li>
+            </div>
+            <div class="business-smallphone2">
+                <span class="iconfont icon-dianhua dh-ch"></span>
+                <p class="business-smdianhua">采购专线400-026-0000</p>
+            </div>
+        </div>
+
+    	<!-- 选项卡 -->
+		<div class="business-second-div">
+            <div class="business-divbody">
+
+                <!-- 左边选项卡 -->
+                <div class="business-divbody-left">
+                    <div class="business-divbody-left1">
+                        <img src="../img/z_gift.webp" alt="" class="business-divbody-leftimg">
+                    </div>
+                    <ul id="business-divbody-uls" class="business-divbody-uls">
+                        <li class="business-divbody-li">
+                            <div class="d1">
+                                <p class="pp1">办公采购</p>
+                                <p class="pp2">台式机 家具 商业日用</p>
+                            </div>
+                            
+                            <div class="business-selectcart">
+                                <p id="selectcart-seat"></p>
+                                <ul>
+                                    <li class="aaa">
+                                        <p class="mn">整机设备></p>
+                                    </li>
+                                    <li>
+                                        <p class="mn">办公耗材></p>
+                                    <li>
+                                        <p class="mn">办公电器></p>
+                                    </li>
+                                    <li>
+                                        <p class="mn">办公家具></p>
+                                    </li>
+                                    <li>
+                                        <p class="mn">配件周边></p>
+                                    </li>
+                                    <li id="mm">
+                                        <p class="mn">办公装修></p>
+                                    </li>
+                                    <div class="selectcart-img1">
+                                        <img src="../img/z_c1.webp" alt="">
+                                        <img src="../img/z_c2.webp" alt="">
+                                        <img src="../img/z_c3.webp" alt="">
+                                        <img src="../img/z_c4.webp" alt="">
+                                        <img src="../img/z_c5.webp" alt="">
+                                        <img src="../img/z_c6.webp" alt="">
+                                    </div>
+                                    <div class="selectcart-img2">
+                                        <img src="../img/z_c7.webp" alt="">
+                                        <img src="../img/z_c8.webp" alt="">
+                                        <img src="../img/z_c9.webp" alt="">
+                                    </div>
+                                </ul>
+                                
+                            </div>
+                        </li>
+                        <li class="business-divbody-li">
+                            <div class="d2">
+                                <p class="pp1">员工福利</p>
+                                <p class="pp2 p-pp2">京东E卡 生活服务</p>
+                                <p class="pp3 p-pp2">厨房小电</p>
+                            </div>
+                            
+                            <div class="business-selectcart">
+                                <p id="selectcart-seat"></p>
+                                <ul>
+                                    <li><p class="mn">米面粮油></p></li>
+                                    <li><p class="mn">茶歇茶点></p></li>
+                                    <li><p class="mn">通讯IT></p></li>
+                                    <li><p class="mn">生活服务></p></li>
+                                    <li><p class="mn">家纺劳保></p></li>
+                                    <li><p class="mn">节日礼盒></p></li>
+                                    <div class="selectcart-img1">
+                                        <img src="../img/z_c2_c1.webp" alt="">
+                                        <img src="../img/z_c2_c2.webp" alt="">
+                                        <img src="../img/z_c2_c3.webp" alt="">
+                                        <img src="../img/z_c2_c4.webp" alt="">
+                                        <img src="../img/z_c2_c5.webp" alt="">
+                                        <img src="../img/z_c2_c6.webp" alt="">
+                                    </div>
+                                    <div class="selectcart-img2">
+                                        <img src="../img/z_c2_c7.webp" alt="">
+                                        <img src="../img/z_c2_c8.webp" alt="">
+                                        <img src="../img/z_c2_c9.webp" alt="">
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="business-divbody-li">
+                            <div class="d1">
+                                <p class="pp1">营销馈赠</p>
+                                <p class="pp2">个护电器 手机 厨具水果</p>
+                            </div>
+                            
+                            <div class="business-selectcart">
+                                <p id="selectcart-seat"></p>
+                                <ul>
+                                    <li><p class="mn">家电个护></p></li>
+                                    <li><p class="mn">鲜花礼品></p></li>
+                                    <li><p class="mn">数码通讯></p></li>
+                                    <li><p class="mn">食品礼盒></p></li>
+                                    <li><p class="mn">箱包钟表></p></li>
+                                    <li><p class="mn">高端奢品></p></li>
+                                    <div class="selectcart-img1">
+                                        <img src="../img/z_c3_c1.webp" alt="">
+                                        <img src="../img/z_c3_c2.webp" alt="">
+                                        <img src="../img/z_c3_c3.webp" alt="">
+                                        <img src="../img/z_c3_c4.webp" alt="">
+                                        <img src="../img/z_c3_c5.webp" alt="">
+                                        <img src="../img/z_c3_c6.webp" alt="">
+                                    </div>
+                                    <div class="selectcart-img2">
+                                        <img src="../img/z_c3_c7.webp" alt="">
+                                        <img src="../img/z_c3_c8.webp" alt="">
+                                        <img src="../img/z_c3_c9.webp" alt="">
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="business-divbody-li">
+                            
+                            <div class="d1">
+                                <p class="pp1">会议团建</p>
+                                <p class="pp2">门票 交通服务 饮料茶水</p>
+                            </div>
+                            <div class="business-selectcart">
+                                <p id="selectcart-seat"></p>
+                                <ul>
+                                    <li><p class="mn">门票场地></p></li>
+                                    <li><p class="mn">交通服务></p></li>
+                                    <li><p class="mn">餐具茶具></p></li>
+                                    <li><p class="mn">饮料茶水></p></li>
+                                    <li><p class="mn">餐饮服务></p></li>
+                                    <li><p class="mn">户外装备></p></li>
+                                    <div class="selectcart-img1">
+                                        <img src="../img/z_c4_c1.webp" alt="">
+                                        <img src="../img/z_c4_c2.webp" alt="">
+                                        <img src="../img/z_c4_c3.webp" alt="">
+                                    </div>
+                                    <div class="selectcart-img2">
+                                        <img src="../img/z_c4_c4.webp" alt="">
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="business-divbody-li">
+                            <div class="d1">
+                                <p class="pp1">商用设备</p>
+                                <p class="pp2">会议平板 网络 监控</p>
+                            </div>
+                            <div class="business-selectcart">
+                                <p id="selectcart-seat"></p>
+                                <ul>
+                                    <li><p class="mn">商务办公></p></li>
+                                    <li><p class="mn">智能会议></p></li>
+                                    <li><p class="mn">移动商务></p></li>
+                                    <li><p class="mn">零售门店></p></li>
+                                    <li><p class="mn">餐饮门店></p></li>
+                                    <li><p class="mn">员工宿舍></p></li>
+                                    <div class="selectcart-img1">
+                                        <img src="../img/z_c5_c1.webp" alt="">
+                                        <img src="../img/z_c5_c2.webp" alt="">
+                                        <img src="../img/z_c5_c3.webp" alt="">
+                                        <img src="../img/z_c5_c4.webp" alt="">
+                                        <img src="../img/z_c5_c5.webp" alt="">
+                                        <img src="../img/z_c5_c6.webp" alt="">
+                                    </div>
+                                    <div class="selectcart-img2">
+                                        <img src="../img/z_c5_c7.webp" alt="">
+                                        <img src="../img/z_c5_c8.webp" alt="">
+                                        <img src="../img/z_c5_c9.webp" alt="">
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="business-divbody-li">
+                            <div class="d1">
+                                <p class="pp1">工业品</p>
+                                <p class="pp2">安全消防 焊接紧固 包装</p>
+                            </div>
+                            <div class="business-selectcart">
+                                <p id="selectcart-seat"></p>
+                                <ul>
+                                    <li><p class="mn">工具></p></li>
+                                    <li><p class="mn">劳动防护></p></li>
+                                    <li><p class="mn">低压配电></p></li>
+                                    <li><p class="mn">工控></p></li>
+                                    <li><p class="mn">仪器仪表></p></li>
+                                    <li><p class="mn">清洗用品></p></li>
+                                    <div class="selectcart-img1">
+                                        <img src="../img/z_c6_c1.webp" alt="">
+                                        <img src="../img/z_c6_c2.webp" alt="">
+                                        <img src="../img/z_c6_c3.webp" alt="">
+                                        <img src="../img/z_c6_c4.webp" alt="">
+                                        <img src="../img/z_c6_c5.webp" alt="">
+                                        <img src="../img/z_c6_c6.webp" alt="">
+                                    </div>
+                                    <div class="selectcart-img2">
+                                        <img src="../img/z_c6_c7.webp" alt="">
+                                        <img src="../img/z_c6_c8.webp" alt="">
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="business-divbody-li">
+                            <div class="d1">
+                                <p class="pp1">企业服务</p>
+                                <p class="pp2">京东京喜 京东云 租赁</p>
+                            </div>
+                            <div class="business-selectcart">
+                                <p id="selectcart-seat"></p>
+                                <ul>
+                                    <li><p class="mn">企业金融></p></li>
+                                    <li><p class="mn">企业拍卖></p></li>
+                                    <li><p class="mn">企业定制></p></li>
+                                    <li><p class="mn">企业租赁></p></li>
+                                    <div class="selectcart-img1">
+                                        <img src="../img/z_c7_c1.webp" alt="">
+                                        <img src="../img/z_c7_c2.webp" alt="">
+                                        <img src="../img/z_c7_c3.webp" alt="">
+                                        <img src="../img/z_c7_c4.webp" alt="">
+                                    </div>
+                                    <div class="selectcart-img2">
+                                        <img src="../img/z_c7_c5.webp" alt="">
+                                        <img src="../img/z_c7_c6.webp" alt="">
+                                        <img src="../img/z_c7_c7.webp" alt="">
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 轮播图 -->
+                <div class="business-divbody-center1" id="business-divbody-center1">
+                    <ul class="business-divbody-culs" id="business-divbody-culs">
+                        <li><img src="../img/z_01.jpg" alt=""></li>
+                        <li><img src="../img/z_02.jpg" alt=""></li>
+                        <li><img src="../img/z_03.jpg" alt=""></li>
+                        <li><img src="../img/z_04.jpg" alt=""></li>
+                        <li><img src="../img/z_01.jpg" alt=""></li>
+                    </ul>
+
+                    <ol id="business-center1-cl">
+                        <li class="business-center1-current"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+
+                <div class="business-divbody-center2">
+                    <ul class="business-divbody-culs2" id="business-divbody-culs2">
+                        <li><img src="../img/z_01_1.png" alt=""></li>
+                        <li><img src="../img/z_01_2.webp" alt="" class="business-divbody-img2"></li>
+                        <li><img src="../img/z_01_3.webp" alt=""></li>
+                    </ul>
+                </div>
+                
+                <div class="business-divbody-right">
+                    <img src="../img/z_heluoluo.jpg" alt="" class="business-right-img">
+                    <p class="business-divbody-right1">hi，何洛洛yn</p>
+
+                    <p class="business-divbody-right2">免费升级为企业会员</p>
+
+                    <p class="business-divbody-right3">企业专属特权</p>
+
+                    <div class="business-divbody-right4">
+                         <ul>
+                             <li>
+                                 <img src="../img/z_r1.webp" alt="">
+                                 <p class="piao">自主开票</p>
+                             </li>
+                             <li>
+                                 <img src="../img/z_r2.webp" alt="">
+                                 <p class="piao">专享价格</p>
+                             </li>
+                             <li>
+                                 <img src="../img/z_r3.webp" alt="">
+                                 <p class="piao">专享经理</p>
+                             </li>
+                             <li>
+                                 <img src="../img/z_r4.webp" alt="" class="piao1">
+                                 <p class="piao">企业金采</p>
+                             </li>
+                             <li>
+                                 <img src="../img/z_r5.webp" alt="">
+                                 <p class="piao">企业贷款</p>
+                             </li>
+                             <li>
+                                 <img src="../img/z_r6.webp" alt="">
+                                 <p class="piao">企业租赁</p>
+                             </li>
+                         </ul>
+                    </div>
+                    
+                    <div class="business-divbody-right5">
+                        <ul>
+                            <li class="right-tou">E卡定制</li>
+                            <li>机票预订</li>
+                            <li>酒店预订</li>
+                        </ul>
+                        <section class="right5-down">
+                            <!-- <div class="right5-cor">点出框的内容</div>
+                            <div>点出框的内容</div>
+                            <div>点出框的内容</div> -->
+                        </section>
+                    </div>
+                </div>
+
+            </div>   
+        </div>
+        
+        <!-- 企业领券中心 -->
+        <div class="business-ticket">
+            <img src="../img/z_q4.webp" alt="" class="ticket-q4">
+            <img src="../img/z_q1.webp" alt="" class="ticket-q1">
+            <img src="../img/z_q2.webp" alt="" class="ticket-q2">
+            <img src="../img/z_q3.webp" alt="" class="ticket-q3">
+        </div>
+        
+        <!-- 模块（1） -->
+        <div class="business-number">
+            <div class="business-number-total">
+
+                <div class="business-number-left">
+                    <div class="business-number-left1">
+                        <p class="business-number-leftp1">企业会员专享</p>
+                        <p class="business-number-leftp2">更多</p>
+                        
+                    </div>
+                    <div class="business-number-lefttotal">
+                        <ul class="wtotal">
+                            <li class="business-number-nli1">
+                                <ul class="business-number-muls1">
+                                    <li>
+                                        <img src="../img/z_n1.webp" alt="">
+                                        <p>创维（SKYWORTH）65H9D 65英寸4K超高清HDR 超薄全面屏2.0 人工智能语音 蓝牙网络 液晶电视机 家电</p>
+                                        <div class="business-number-price">
+                                            <span class="business-number-pr1">¥2999.00</span>
+                                            <span class="business-number-pr11">¥4599.00</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="../img/z_n2.webp" alt="">
+                                        <p>苏泊尔(SUPOR)破壁机 智能预约家用破壁料理机 榨汁机豆浆机辅食机绞肉机果汁机 加热搅拌研磨多功能JP728</p>
+                                        <div class="business-number-price">
+                                            <span class="business-number-pr1">¥499.00</span>
+                                            <span class="business-number-pr11">¥529.00</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="../img/z_n3.webp" alt="">
+                                        <p>爱仕达（ASD）电压力锅6L大容量  一锅双胆压力煲  开盖加热 太极蒸格 智能预约多功能高压锅 AP-Y60E805</p>
+                                        <div class="business-number-price">
+                                            <span class="business-number-pr1">¥199.00</span>
+                                            <span class="business-number-pr11">¥339.00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="business-number-nli2">
+                                <ul class="business-number-muls2">
+                                    <li>
+                                        <img src="../img/z_n4.webp" alt="">
+                                        <p>创维（SKYWORTH）55H9D 55英寸4K超高清HDR 超薄全面屏2.0 人工智能语音 蓝牙网络 液晶电视机 家电</p>
+                                        <div class="business-number-price">
+                                            <span class="business-number-pr1">¥2799.00</span>
+                                            <span class="business-number-pr11">¥6399.00</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="../img/z_n5.webp" alt="">
+                                        <p>奔腾 POVOS 多功能家用预约加热破壁料理机  搅拌机辅食机可榨汁PBJ80-BT01A</p>
+                                        <div class="business-number-price">
+                                            <span class="business-number-pr1">¥489.00</span>
+                                            <span class="business-number-pr11">¥2399.00</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="../img/z_n6.webp" alt="">
+                                        <p>奔腾 POVOS IH 电磁加热电饭煲电饭锅 4升多功能智能定时预约DFB40-BT01</p>
+                                        <div class="business-number-price">
+                                            <span class="business-number-pr1">¥459.00</span>
+                                            <span class="business-number-pr11">¥499.00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ol class="business-number-leftuls2" id="business-number-leftuls2">
+                        <li class="leftli1"></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="business-number-right">
+                    <div class="business-number-right1">
+                        <p class="business-number-rightp1">热销品排行榜</p>
+                        <ul  class="business-number-rightul">
+                            <li>笔记本</li>
+                            <li>台式机</li>
+                            <li>手机</li>
+                            <li>空调</li>
+                            <li>平板电视</li>
+                        </ul>
+                        <p class="business-number-rightp2">更多</p>
+                    </div>
+
+                    <div class="business-number-righttotal">
+                        <ul  class="rtotal">
+                            <li class="business-number-rli1">
+                                <ul class="business-number-ruls1">
+                                    <li>
+                                        <svg class="icon bz_icon" aria-hidden="true">
+                                            <use xlink:href="#icon-diyihuizhang"></use>
+                                        </svg>
+                                        <img src="../img/z_n11.webp" alt="">
+                                        <p class="p1">联想(Lenovo)扬天M5900d商用办公台式电脑整机(AMD A4 4G 1T 键鼠 office 四年上门)19.5英寸</p>
+                                        <p class="p2">¥2449.00</p>
+                                        <p class="p3">企业专享价</p>
+                                    </li>
+                                    <li>
+                                        <svg class="icon bz_icon" aria-hidden="true">
+                                            <use xlink:href="#icon-dierhuizhang"></use>
+                                        </svg>
+                                        <img src="../img/z_n22.webp" alt="">
+                                        <p class="p1">联想(Lenovo)扬天M4000s英特尔酷睿i3办公台式电脑整机(i3 -8100 8G 1T 键鼠 串口  四年上门)21.5英寸</p>
+                                        <p class="p2">¥2299.00</p>
+                                        <p class="p3">企业专享价</p>
+                                    </li>
+                                    <li>
+                                        <svg class="icon bz_icon" aria-hidden="true">
+                                            <use xlink:href="#icon-disanhuizhang"></use>
+                                        </svg>
+                                        <img src="../img/z_n33.webp" alt="">
+                                        <p class="p1">联想(Lenovo)P680 九代英特尔酷睿i7 高性能 创意设计台式电脑主机(I7-9700 8G 1T+256G GTX1660Ti 四年上门)</p>
+                                        <p class="p2">¥2299.00</p>
+                                        <p class="p3">企业专享价</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="business-number-rli2">
+                                <ul class="business-number-ruls2">
+                                    <li>
+                                        <span class="iconfont icon-disanhuizhang ch_bsp"></span>
+                                        <img src="../img/z_n44.webp" alt="">
+                                        <p class="p1">宏碁（Acer）蜂鸟一体机C24 窄边框一体机电脑 低蓝光 不闪屏 23.8英寸（i3-8130U 8G 256GSSD win10）</p>
+                                        <p class="p2">¥2299.00</p>
+                                        <p class="p3">企业专享价</p>
+                                    </li>
+                                    <li>
+                                        <span class="iconfont icon-disanhuizhang ch_bsp"></span>
+                                        <img src="../img/z_n55.webp" alt="">
+                                        <p class="p1">宏碁（Acer）商祺SQX4270 140N 商用办公台式电脑整机（G4900 4G 1T Win10 三年上门）20英寸</p>
+                                        <p class="p2">¥2299.00</p>
+                                        <p class="p3">企业专享价</p>
+                                    </li>
+                                    <li>
+                                        <span class="iconfont icon-disanhuizhang ch_bsp"></span>
+                                        <img src="../img/z_n66.webp" alt="">
+                                        <p class="p1">宏碁(Acer) 暗影骑士游戏台式机N50-N92 吃鸡游戏电脑主机(i5-8400 8G 128G SSD+1T GTX1050Ti 4G Win10)</p>
+                                        <p class="p2">¥2299.00</p>
+                                        <p class="p3">企业专享价</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ol class="business-number-rightuls2" id="business-number-rightuls2">
+                        <li class="rightli1"></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- 模块（1） -->
+
+        <!-- 模块（2） -->
+        <div class="business-computer">
+            <div class="business-computer-total">
+                <div class="business-computer-left">
+                    <div class="business-computer-le1">
+                        <p class="business-computer-firstp">电脑办公馆</p>
+                        <p class="business-computer-se2">电脑数码企业采购</p>
+                        <!-- <p class="business-computer-se3"></p> -->
+                        <div class="business-computer-se4">
+                            <p>爆款直降</p>
+                            <p class="com-ch">惠普</p>
+                            <p>纸类专区</p>
+                            <p>办公设备</p>
+                            <p>办公文具</p>
+                            <p>ThinkPad</p>
+                        </div>
+                    </div>
+                    <div class="business-computer-llunbo">
+                        <div id="m2_box">
+                            <ul class="m2-uls" id="m2-uls">
+                                <li><img src="../img/z_mo2_l1.webp" alt=""></li>
+                                <li><img src="../img/z_mo2_l2.webp" alt=""></li>
+                            </ul>
+                            <ol id="m2_ols1" class="m2-ols1">
+                                <li class="m2-col1"></li>
+                                <li></li>
+                            </ol>
+                        </div>                  
+                    </div>
+                    <div class="business-computer-le3">
+                        <ul>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c1.webp" alt="">
+                                <p>戴尔(DELL)成就3470 英特尔酷睿i5 商用办公 台式电脑整机(九代i5-9400 8G 1T 四年上门 键鼠 WIFI)21.5英寸</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥3699.00</span>
+                            </li>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c2.webp" alt="">
+                                <p>联想ThinkPad 翼480（1ACD）英特尔酷睿i7 14英寸轻薄窄边框笔记本电脑（i7-8550U 8G 128GSSD+1T 2G独显 高清显示屏）冰原银</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥6499.00</span>
+                            </li>
+                            <li class="m2">
+                                <img src="../img/z_n2_c3.webp" alt="">
+                                <p>联想ThinkPad 翼480（0UCD）英特尔酷睿i5 14英寸轻薄笔记本电脑（i5-8250U 8G 256GSSD 2G独显）冰原银</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥4699.00</span>
+                            </li>
+                        </ul>
+                        <img src="../img/z_n2_lo1.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo2.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo3.webp" alt="" class="computer-m1">
+                    </div>
+                </div>
+
+                <div class="business-computer-right">
+                    <div class="business-computer-rit1">
+                        <p class="business-computer-ritp">家电企采馆</p>
+                        <p class="business-computer-rit2">企采电器专享优惠</p>
+                        <div class="business-computer-rit4">
+                            <p>中秋采购</p>
+                            <p>员工福利</p>
+                            <p>企采服务</p>
+                            <p>个性采购</p>
+                            <p>美的空调</p>
+                            <p>海信电视</p>
+                        </div>
+                    </div>
+
+                    <div class="business-computer-lunbo">
+                        <div id="m2_box">
+                            <ul class="m2-uls" id="m2-uls">
+                                <li><img src="../img/z_mo2_r1.webp" alt=""></li>
+                                <li><img src="../img/z_mo2_r2.webp" alt=""></li>
+                            </ul>
+                            <ol id="m2_ols" class="m2-ols">
+                                <li class="m2-col"></li>
+                                <li></li>
+                            </ol>
+                        </div>                  
+                    </div>
+
+
+                    <div class="business-computer-le3">
+                        <ul>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c4.webp" alt="">
+                                <p>美的（Midea）电磁炉多功能大功率 触控黑晶面板 智能暂停 4D防水 C21-RT2171</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥149</span>
+                            </li>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c5.webp" alt="">
+                                <p>海信（Hisense）4K超高清人工智能网络液晶电视43英寸电视机 HZ43A55</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥1999</span>
+                            </li>
+                            <li class="m2">
+                                <img src="../img/z_n2_c6.webp" alt="">
+                                <p>美的（Midea）网红多功能锅料理锅电烧烤锅电火锅MC-DY3020Power101(带深锅盘+牛扒盘+丸子烧烤盘+圆饼盘)</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥499</span>
+                            </li>
+                        </ul>
+                        <img src="../img/z_n2_lo4.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo5.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo6.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo7.webp" alt="" class="computer-m1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模块（2） -->
+
+        <!-- 模块（3） -->
+        <div class="business-telephone">
+            <div class="business-telephone-total">
+                <div class="business-telephone-left">
+                    <div class="business-telephone-le1">
+                        <p class="business-telephone-firstp">手机企采馆</p>
+                        <p class="business-telephone-se2">企业采购 特价优惠</p>
+                        <p class="business-telephone-se3"></p>
+                        <div class="business-telephone-se4">
+                            <p>Apple</p>
+                            <p>小米</p>
+                            <p>荣耀</p>
+                            <p>华为</p>
+                            <p>一加</p>
+                            <p class="tel-ch1">充值中心</p>
+                        </div>
+                    </div>
+                    <div class="business-computer-llunbom3">
+                        <div id="m3_box">
+                            <ul class="m3-uls" id="m3-uls">
+                                <li><img src="../img/z_mo3_l1.webp" alt=""></li>
+                                <li><img src="../img/z_mo3_l2.webp" alt=""></li>
+                            </ul>
+                            <ol id="m3_ols1" class="m3-ols1">
+                                <li class="m3-col1"></li>
+                                <li></li>
+                            </ol>
+                        </div>                  
+                    </div>
+                    <div class="business-computer-le3">
+                        <ul>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c7.webp" alt="">
+                                <p>华为 HUAWEI nova 5i Pro 前置3200万人像超级夜景4800万AI四摄极点全面屏6GB+128GB翡冷翠全网通双4G手机</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥2149.00</span>
+                            </li>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c8.webp" alt="">
+                                <p>Redmi K20Pro 骁龙855 索尼4800万超广角三摄  AMOLED弹出式全面屏 8GB+128GB 火焰红 游戏手机 小米 红米</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥2499.00</span>
+                            </li>
+                            <li class="m2">
+                                <img src="../img/z_n2_c9.webp" alt="">
+                                <p>Apple iPhone XS Max (A2104) 256GB 金色 移动联通电信4G手机 双卡双待</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥8999.00</span>
+                            </li>
+                        </ul>
+                        <img src="../img/z_n2_lo8.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo9.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo10.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo11.webp" alt="" class="computer-m1">
+                    </div>
+                </div>
+                <div class="business-telephone-right">
+                    <div class="business-telephone-rit1">
+                        <p class="business-telephone-ritp">超市企采馆</p>
+                        <p class="business-telephone-rit2">企业超市 奇妙好物</p>
+                        <p class="business-telephone-rit3"></p>
+                        <div class="business-telephone-rit4">
+                            <p>休闲食品</p>
+                            <p>米面粮油</p>
+                            <p>中外名酒</p>
+                            <p>水饮冲调</p>
+                            <p>个护清洗</p>
+                            <p class="tel-ch1">母婴</p>
+                        </div>
+                    </div>
+                    <div class="business-computer-lunbom3">
+                        <div id="m3_box">
+                            <ul class="m3-uls" id="m3-uls">
+                                <li><img src="../img/z_mo3_r1.webp" alt=""></li>
+                                <li><img src="../img/z_mo3_r2.webp" alt=""></li>
+                            </ul>
+                            <ol id="m3_ols" class="m3-ols">
+                                <li class="m3-col"></li>
+                                <li></li>
+                            </ol>
+                        </div>                  
+                    </div>
+                    <div class="business-computer-le3">
+                        <ul>
+                            <li>
+                                <img src="../img/z_n2_c10.webp" alt="">
+                                <p>蒙都 内蒙特产 休闲零食 清真手撕风干牛肉干原味488g</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥115.00</span>
+                            </li>
+                            <li>
+                                <img src="../img/z_n2_c11.webp" alt="">
+                                <p>中粮我买网 时怡 休闲食品 坚果炒货 优选什锦混合果仁(1020g)零食坚果每日坚果</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥108.00</span>
+                            </li>
+                            <li>
+                                <img src="../img/z_n2_c12.webp" alt="">
+                                <p>金龙鱼 东北大米 寒地东北大米 4kg（新老包装随机发货）</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥25.90</span>
+                            </li>
+                        </ul>
+                        <img src="../img/z_n2_lo12.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo13.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo14.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo15.webp" alt="" class="computer-m1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模块（3） -->
+
+        <!-- 模块（4） -->
+        <div class="business-eat">
+            <div class="business-eat-total">
+                <div class="business-eat-left">
+                    <div class="business-eat-le1">
+                        <p class="business-eat-firstp">京东餐饮</p>
+                        <p class="business-eat-se2">餐饮采购一站式服务</p>
+                        <p class="business-eat-se3"></p>
+                        <div class="business-eat-se4">
+                            <p class="eat-ch">大闸蟹</p>
+                            <p class="eat-ch">奇异果</p>
+                            <p>水果礼盒</p>
+                            <p class="tel-ch1">牛肉</p>
+                            <p class="tel-ch1">橙子</p>
+                            <p class="tel-ch1">海参</p>
+                        </div>
+                    </div>
+                    <div class="business-computer-llunbom4">
+                        <div id="m4_box">
+                            <ul class="m4-uls" id="m4-uls">
+                                <li><img src="../img/z_mo4_l1.webp" alt=""></li>
+                                <li><img src="../img/z_mo4_l2.webp" alt=""></li>
+                            </ul>
+                            <ol id="m4_ols1" class="m4-ols1">
+                                <li class="m4-col1"></li>
+                                <li></li>
+                            </ol>
+                        </div>                  
+                    </div>
+                    <div class="business-computer-le3">
+                        <ul>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c13.webp" alt="">
+                                <p>【礼券】【苏州馆】阳澄之王2566型大闸蟹礼券公4.0两母3.0两4对装8只</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥218.00</span>
+                            </li>
+                            <li class="m1 m2">
+                                <img src="../img/z_n2_c14.webp" alt="">
+                                <p>【京东出品】八享时糖水黄桃罐头礼盒425g*6 出口日本级 水果罐头</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥34.90</span>
+                            </li>
+                            <li class="m2">
+                                <img src="../img/z_n2_c15.webp" alt="">
+                                <p>【京东出品】八享时金骏眉红茶礼盒500g(250g*2) 武夷山直采 自营茶叶</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥59.90</span>
+                            </li>
+                        </ul>
+                        <img src="../img/z_n2_lo16.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo17.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo18.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo19.webp" alt="" class="computer-m1">
+                    </div>
+                </div>
+                <div class="business-eat-right">
+                    <div class="business-eat-rit1">
+                        <p class="business-eat-ritp">时尚企业购</p>
+                        <p class="business-eat-rit2">馈赠佳品 企业定制</p>
+                        <p class="business-eat-rit3"></p>
+                        <div class="business-eat-rit4">
+                            <p>职场西装</p>
+                            <p class="eat-ch">功能鞋</p>
+                            <p class="eat-ch">电脑包</p>
+                            <p class="eat-ch">拉杆箱</p>
+                            <p class="eat-ch">公文包</p>
+                            <p>金银投资</p>
+                        </div>
+                    </div>
+                    <div class="business-computer-lunbom4">
+                        <div id="m4_box">
+                            <ul class="m4-uls" id="m4-uls">
+                                <li><img src="../img/z_mo4_r1.webp" alt=""></li>
+                                <li><img src="../img/z_mo4_r2.webp" alt=""></li>
+                            </ul>
+                            <ol id="m4_ols" class="m4-ols">
+                                <li class="m4-col"></li>
+                                <li></li>
+                            </ol>
+                        </div>                  
+                    </div>
+                    <div class="business-computer-le3">
+                        <ul>
+                            <li>
+                                <img src="../img/z_n2_c16.webp" alt="">
+                                <p>中国黄金 Au9999黄金薄片财富投资金条10g</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥3606.00</span>
+                            </li>
+                            <li>
+                                <img src="../img/z_n2_c17.webp" alt="">
+                                <p>能盾春秋长袖工作服套装男上衣裤子 汽修工程服 劳保工服 工装制服 劳保服工作服定制CJ-12 藏青色升级（上衣+裤子） 175</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥82.00</span>
+                            </li>
+                            <li>
+                                <img src="../img/z_n2_c18.webp" alt="">
+                                <p>玉兰油OLAY护肤套装新生塑颜礼盒化妆品套装4件套（大红瓶面霜+大红水+大红瓶面膜*2）女士提拉紧致 补水保湿</p>
+                                <span class="comput-lepm">企业专享价</span>
+                                <span class="computer-lepr">¥359</span>
+                            </li>
+                        </ul>
+                        <img src="../img/z_n2_lo20.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo21.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo22.webp" alt="" class="computer-m1">
+                        <img src="../img/z_n2_lo23.webp" alt="" class="computer-m1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模块（4） -->
+
+        <!-- 会员专区 -->
+        <div class="business-numberarea">
+            <div class="business-numberarea-total">
+                <p class="business-numberarea-onep">会员专区</p>
+                <img src="../img/z_areabig.webp" alt="" class="business-numberarea-oneimg">
+                    <div class="business-numberarea-onediv">
+                        <ul class="business-numberarea-oneul">
+                            <li><img src="../img/z_area1.webp" alt=""></li>
+                            <li><img src="../img/z_area2.webp" alt=""></li>
+                            <li><img src="../img/z_area3.webp" alt=""></li>
+                            <li><img src="../img/z_area4.webp" alt=""></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <!-- 会员专区 -->
+
+        <!-- 广告 -->
+        <div class="business-advert">
+            <div class="business-advert-total">
+                <p class="business-advert-onep">广告</p>
+
+                <div class="business-advert-div1">
+                    <img src="../img/z_advert1.webp" alt="">
+                    <p class="business-advert-textp">立即进入</p>
+                </div>
+                <div class="business-advert-div12"></div>
+
+                <div class="business-advert-div2 w-ch">
+                    <img src="../img/z_advert2.webp" alt="">
+                    <p class="business-advert-textp">立即进入</p>
+                </div>
+                <div class="business-advert-div22 w-ch1"></div>
+
+                <div class="business-advert-div3 w-ch">
+                    <img src="../img/z_advert3.webp" alt="">
+                    <p class="business-advert-textp">立即进入</p>
+                </div>
+                <div class="business-advert-div32 w-ch1"></div>
+
+                <div class="business-advert-div4 h-ch">
+                    <img src="../img/z_advert4.webp" alt="">
+                    <p class="business-advert-textp">立即进入</p>
+                </div>
+                <div class="business-advert-div42 h-ch1"></div>
+
+                <div class="business-advert-div5 h-ch w-ch">
+                    <img src="../img/z_advert5.webp" alt="">
+                    <p class="business-advert-textp">立即进入</p>
+                </div>
+                <div class="business-advert-div52 h-ch1 w-ch1"></div>
+
+                <div class="business-advert-div6 h-ch w-ch">
+                    <img src="../img/z_advert6.webp" alt="">
+                    <p class="business-advert-textp">立即进入</p>
+                </div>
+                <div class="business-advert-div62 h-ch1 w-ch1"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <ul class="business-advert-oneul">
+                    <li>
+                        <div class="business-advert-div1">
+                            <img src="../img/z_advert1.webp" alt="">
+                            <p class="business-advert-textp">立即进入</p>
+                        </div>
+                        <div class="business-advert-div12"></div>
+                    </li>
+                    <li>
+                        <div class="business-advert-div2 w-ch">
+                            <img src="../img/z_advert2.webp" alt="">
+                            <p class="business-advert-textp">立即进入</p>
+                        </div>
+                        <div class="business-advert-div22 w-ch1"></div>
+                    </li>
+                    <li>
+                        <div class="business-advert-div3 w-ch">
+                            <img src="../img/z_advert3.webp" alt="">
+                            <p class="business-advert-textp">立即进入</p>
+                        </div>
+                        <div class="business-advert-div32 w-ch1"></div>
+                    </li>
+                    <li>
+                        <div class="business-advert-div4 h-ch">
+                            <img src="../img/z_advert4.webp" alt="">
+                            <p class="business-advert-textp">立即进入</p>
+                        </div>
+                        <div class="business-advert-div42 h-ch1"></div>
+                    </li>
+                    <li>
+                        <div class="business-advert-div5 h-ch w-ch">
+                            <img src="../img/z_advert5.webp" alt="">
+                            <p class="business-advert-textp">立即进入</p>
+                        </div>
+                        <div class="business-advert-div52 h-ch1 w-ch1"></div>
+                    </li>
+                    <li>
+                        <div class="business-advert-div6 h-ch w-ch">
+                            <img src="../img/z_advert6.webp" alt="">
+                            <p class="business-advert-textp">立即进入</p>
+                        </div>
+                        <div class="business-advert-div62 h-ch1 w-ch1"></div>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+        <!-- 广告 -->
+        
+        <!-- 工业品 -->
+        <div class="business-industry">
+            <div class="business-industry-total">
+                <p class="business-industry-onep">工业品</p>
+
+                <div class="ind-pic">
+                    <img src="../img/z_industryleft1.webp" alt="">
+                    <p class="pic1">工业品</p>
+                    <p class="pic2">企业采购 天天享实惠</p>
+                    <ul class="pic3">
+                        <li>大牌联合满299减100</li>
+                        <li>安全防护 爆款精选5折起</li>
+                        <li>工具低至9.9元</li>
+                    </ul>
+                </div>
+
+                <div class="ind-pic1"><img src="../img/z_industryleft2.webp" alt=""></div>
+                <div class="ind-pic11">
+                    <p class="pic11">安全防护</p>
+                    <p class="pic22">品质好价 企业首选</p>
+                </div>
+
+                <div class="ind-pic2"><img src="../img/z_industryleft3.webp" alt=""></div>
+                <div class="ind-pic22">
+                    <p class="pic11">五金工具</p>
+                    <p class="pic22">大牌钜惠</p>
+                </div>
+
+                <div class="ind-pic3">
+                    <ul class="ind-uls">
+                        <li class="r1 b1">
+                            <img src="../img/z_industryright1.webp" alt="">
+                            <p class="p1">西斯贝尔/SYSBEL SPP104聚乙烯盛漏托盘 30*130*128化学品泄漏预防托盘 四桶型 68GAL/260L黄色 1个 企业专享</p>
+                            <P class='p2'>¥2830.00</p>
+                        </li>
+                        <li class="r1 b1">
+                            <img src="../img/z_industryright2.webp" alt="">
+                            <p class="p1">谋福 CNMF 8626 消防员防护服 14款3C消防战斗服 灭火装备 3C认证款5件套【180（含头盔手 腰带服装靴子）】</p>
+                            <p class="p2">¥3800.00</p>
+                        </li>
+                        <li class="b1">
+                            <img src="../img/z_industryright3.webp" alt="">
+                            <p class="p1">科力邦（Kelibang) 户外垃圾桶 大号加厚240L商用塑料环卫垃圾桶带盖轮工业小区物业翻盖果皮箱 KB1001 绿色</p>
+                            <p class="p2">¥299.00</p>
+                        </li>
+                        <li class="r1">
+                            <img src="../img/z_industryright4.webp" alt="">
+                            <p class="p1">林盾 LINDUN 3006V防尘口罩工业男女防灰防护口罩时尚防雾霾口罩 白色</p>
+                            <p class="p2">¥2.38</p>
+                        </li>
+                        <li class="r1">
+                            <img src="../img/z_industryright5.webp" alt="">
+                            <p class="p1">信捷（Xinjie） 野战光缆 LC/UPC-FC/UPC单模双芯70米拉远光缆组件 室外基站跳线</p>
+                            <p class="p2">¥231.00</p>
+                        </li>
+                        <li>
+                            <img src="../img/z_industryright6.webp" alt="">
+                            <p class="p1">美孚（Mobil）美孚1号 全合成机油 5W-40 SN级 4*4L 汽车用品</p>
+                            <p class="p2">¥1396.00</p>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="business-indu1">
+                    <li><img src="../img/z_industryfooter1.webp" alt="" class="h-ch"></li>
+                    <li><img src="../img/z_industryfooter2.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_industryfooter3.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_industryfooter4.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_industryfooter5.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_industryfooter6.webp" alt="" class="ch-img h-ch"></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 工业品 -->
+
+        <!-- 商品采购 -->
+        <div class="business-purchase">
+            <div class="business-purchase-total">
+                <p class="business-purchase-onep">商用采购</p>
+
+                <div class="ind-pic">
+                    <img src="../img/z_purchaseleft1.webp" alt="">
+                    <p class="pic1">商用场景馆</p>
+                    <p class="pic2">专业商用一站购</p>
+                    <ul class="pic3">
+                        <li>戴尔中小企业采购节</li>
+                        <li>家电迎新秋</li>
+                        <li>会议音频视频活动</li>
+                    </ul>
+                </div>
+
+                <div class="ind-pic1"><img src="../img/z_purchaseleft2.webp" alt=""></div>
+                <div class="ind-pic11">
+                    <p class="pic11">九代助力 创新发力</p>
+                </div>
+
+                <div class="ind-pic2"><img src="../img/z_purchaseleft3.webp" alt=""></div>
+                <div class="ind-pic22">
+                    <p class="pic11">TCL大牌日 抢半价优惠</p>
+                </div>
+
+                <div class="ind-pic3">
+                    <ul class="ind-uls">
+                        <li class="r1 b1">
+                            <img src="../img/z_purchaseright1.webp" alt="">
+                            <p class="p1">惠普（HP）战66 AMD升级版 14英寸轻薄笔记本电脑（锐龙R5 3500U 8G 512G PCIe SSD Win10 一年上门）银色</p>
+                            <P class='p2'>¥4499.00</p>
+                        </li>
+                        <li class="r1 b1">
+                            <img src="../img/z_purchaseright2.webp" alt="">
+                            <p class="p1">戴尔(DELL)成就3470 英特尔酷睿i5 商用办公 台式电脑整机(九代i5-9400 8G 1T 四年上门 键鼠 WIFI)21.5英寸</p>
+                            <p class="p2">¥3699.00</p>
+                        </li>
+                        <li class="b1">
+                            <img src="../img/z_purchaseright3.webp" alt="">
+                            <p class="p1">Apple iMac【2019新品】21.5英寸苹果一体机4K屏Core i3 8G1TB机械 RP555X显卡 台式电脑主机MRT32CH/A</p>
+                            <p class="p2">¥9099.00</p>
+                        </li>
+                        <li class="r1">
+                            <img src="../img/z_purchaseright4.webp" alt="">
+                            <p class="p1">华三（H3C）H3C Mini A20-E 300M无线86型面板式AP 企业级wifi无线接入点 支持POE供电</p>
+                            <p class="p2">¥129.00</p>
+                        </li>
+                        <li class="r1">
+                            <img src="../img/z_purchaseright5.webp" alt="">
+                            <p class="p1">华三（H3C）H3C GR1100-P全千兆企业级路由器 VPN/防火墙 支持POE供电</p>
+                            <p class="p2">¥599.00</p>
+                        </li>
+                        <li>
+                            <img src="../img/z_purchaseright6.webp" alt="">
+                            <p class="p1">美的（Midea）KFR-51LW/BP2DN8Y-YA400(B3) 大2匹 变频冷暖 空调柜机 三级能效（标准安装见详情）企业购</p>
+                            <p class="p2">¥5199.00</p>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="business-indu1">
+                    <li><img src="../img/z_purchasefooter1.webp" alt="" class="h-ch"></li>
+                    <li><img src="../img/z_purchasefooter2.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_purchasefooter3.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_purchasefooter4.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_purchasefooter5.webp" alt="" class="ch-img h-ch"></li>
+                    <li><img src="../img/z_purchasefooter6.webp" alt="" class="ch-img h-ch"></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 商品采购 -->
+
+        <!-- 企业购卡 -->
+        <div class="business-businesscart">
+            <div class="business-businesscart-total">
+                <p class="business-businesscart-onep">企业购卡</p>
+
+                <div class="ind-pic">
+                    <img src="../img/z_cartleft1.webp" alt="">
+                    <p class="pic1">京东E卡</p>
+                    <p class="pic2">馈赠福利优选</p>
+                    <ul class="pic3">
+                        <li>京东E卡城市系列纪念卡</li>
+                        <li>京东有礼随时随地传递心意</li>
+                        <li>员工福利馈赠首选</li>
+                    </ul>
+                </div>
+
+                <div class="ind-pic1"><img src="../img/z_cartleft2.webp" alt=""></div>
+                <div class="ind-pic11">
+                    <p class="pic11">京东电子卡</p>
+                    <p class="pic22">即买即用</p>
+                </div>
+
+                <div class="ind-pic2"><img src="../img/z_cartleft3.webp" alt=""></div>
+                <div class="ind-pic22">
+                    <p class="pic11">礼品卡</p>
+                    <p class="pic22">支持微信送好礼</p>
+                </div>
+
+                <div class="ind-pic3">
+                    <ul class="ind-uls">
+                        <li class="r1 b1">
+                            <img src="../img/z_cartright1.webp" alt="">
+                            <p class="p1">京东E卡经典卡200面值（实体卡）</p>
+                            <P class='p2'>¥200.00</p>
+                        </li>
+                        <li class="r1 b1">
+                            <img src="../img/z_cartright2.webp" alt="">
+                            <p class="p1">京东E卡经典卡300面值（电子卡）</p>
+                            <p class="p2">¥300.00</p>
+                        </li>
+                        <li class="b1">
+                            <img src="../img/z_cartright3.webp" alt="">
+                            <p class="p1">京东E卡生日卡500面值（实体卡）</p>
+                            <p class="p2">¥500.00</p>
+                        </li>
+                        <li class="r1">
+                            <img src="../img/z_cartright4.webp" alt="">
+                            <p class="p1">京东E卡经典卡50面值实体卡 京东商城官方礼品卡/购物卡/提货卡 中秋春节员工福利商务礼品市场活动</p>
+                            <p class="p2">¥50.00</p>
+                        </li>
+                        <li class="r1">
+                            <img src="../img/z_purchaseright5.webp" alt="">
+                            <p class="p1">京东E卡100元（电子卡）</p>
+                            <p class="p2">¥100.00</p>
+                        </li>
+                        <li>
+                            <img src="../img/z_cartright6.webp" alt="">
+                            <p class="p1">京东E卡经典卡500面值（电子卡）</p>
+                            <p class="p2">¥500.00</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 企业购卡 -->
+
+        <!-- 合作伙伴 -->
+        <div class="business-partners">
+            <div class="business-partners-total">
+                <p class="business-partners-p">合作伙伴</p>
+                <ul class="business-partners-uls">
+                    <li><img src="../img/z_p1.webp" alt=""></li>
+                    <li><img src="../img/z_p2.webp" alt=""></li>
+                    <li><img src="../img/z_p3.webp" alt=""></li>
+                    <li><img src="../img/z_p4.webp" alt=""></li>
+                    <li><img src="../img/z_p5.webp" alt=""></li>
+                    <li><img src="../img/z_p6.webp" alt=""></li>
+                    <li><img src="../img/z_p7.webp" alt=""></li>
+                    <li><img src="../img/z_p8.webp" alt=""></li>
+                    <li><img src="../img/z_p9.webp" alt=""></li>
+                    <li><img src="../img/z_p10.webp" alt=""></li>
+                    <li><img src="../img/z_p11.webp" alt=""></li>
+                    <li><img src="../img/z_p12.webp" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 合作伙伴 -->
+
+        <!-- 底部（1） -->
+        <div class="business-footer">
+            <div class="business-footer-total1">
+                <div class="ip-div">
+                    <img src="../img/z_footer_n1.png" alt="" class="ip-img">
+                    <p class="ip-p">专享价</p>
+                </div>
+                <div class="ip-div n">
+                    <img src="../img/z_footer_n2.png" alt="">
+                    <p class="ip-p">自主发票</p>
+                </div>
+                <div class="ip-div n">
+                    <img src="../img/z_footer_n3.png" alt="">
+                    <p class="ip-p">专享运费</p>
+                </div>
+                <div class="ip-div n">
+                    <img src="../img/z_footer_n4.png" alt="">
+                    <p class="ip-p">售后双免</p>
+                </div>
+                <div class="ip-div n">
+                    <img src="../img/z_footer_n5.png" alt="">
+                    <p class="ip-p">专属客服</p>
+                </div>
+            </div>
+
+            <div class="business-footer-total2">
+                <img src="../img/z_erweimafooter.jpg" alt="" class="f2-img">
+                <p>微信搜索【京东企业采购】</p>
+                <p class="f2-p2">扫码享优惠</p>
+            </div>
+
+            <div class="business-footer-total3">
+                <div class="f3-d">
+                    <div class="f3-ch">购物指南</div>
+                    <p>购物流程</p>
+                    <p>会员注册</p>
+                    <p>发票开具</p>
+                    <p>售后政策</p>
+                    <p>支付方式</p>
+                </div>
+                <div class="f3-d">
+                    <div class="f3-ch">配送方式</div>
+                    <p>配送运费</p>
+                    <p>配送时效</p>
+                    <p>配送服务查询</p>
+                </div>
+                <div class="f3-d">
+                    <div class="f3-ch">特色服务</div>
+                    <p>自主开票</p>
+                    <p>企业金采</p>
+                    <p>企业商旅</p>
+                    <p>京东云</p>
+                </div>
+                <div class="f3-d">
+                    <div class="f3-ch">专属客服</div>
+                    <p>在线客服</p>
+                    <p>JIMI咨询</p>
+                </div>
+                <div class="f3-d">
+                    <div class="f3-ch">企业会员合作</div>
+                    <p>qiyehuiyuan@jd.com</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- 底部（1） -->
+        
+    </body>
+</html>

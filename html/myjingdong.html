@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>我的京东</title>
+        <link rel="stylesheet" href="../css/myjingdong.css">
+        <script src="../js/jquery-3.4.1.js"></script>
+       <link rel="stylesheet" href="../n_iconfont/c_iconfont/iconfont.css">
+        <link rel="stylesheet" href="../n_iconfont/n01_iconfont/iconfont.css">
+        <link rel="stylesheet" href="../n_iconfont/n03_iconfont/iconfont.css">
+        <link rel="stylesheet" href="../css/bottom.css">
+        <script>
+        	/*导航条首页设置*/
+        	$(function(){
+        		/*鼠标移入*/
+        		$('.myjingdong_top .mfooter .tbody1 .down').mouseenter(function(){
+        			$('.myjingdong_top .mfooter .tbody1 .tbox1').css('display','block');
+        		});
+
+        		$('.myjingdong_top .mfooter .tbody1 .tbox1').mouseenter(function(e){
+        			$('.myjingdong_top .mfooter .tbody1 .tbox1').css('display','block');    			
+        			e.stopPropagation();
+				});
+
+        		/*鼠标移出*/
+         		$('.myjingdong_top .mfooter .tbody1 .tbox1').mouseleave(function(){
+        			$('.myjingdong_top .mfooter .tbody1  .tbox1').css('display','none');      			
+        		});
+
+        		$('.myjingdong_top .mfooter .tbody1 .tbox1').mouseleave(function(e){
+        			$('.myjingdong_top .mfooter .tbody1 .tbox1').css('display','none');        			
+        			e.stopPropagation();
+        		});
+        	})
+
+        	/*导航条 账户设置*/
+        	$(function(){
+        		/*鼠标移入*/
+        		$('.myjingdong_top .mfooter .tbody2 .down2').mouseenter(function(){
+        			$('.myjingdong_top .mfooter .tbody2 .tbox2').css('display','block');
+        		});
+
+        		$('.myjingdong_top .mfooter .tbody2 .tbox2').mouseenter(function(e){
+        			$('.myjingdong_top .mfooter .tbody2 .tbox2').css('display','block');    			
+        			e.stopPropagation();
+				});
+
+        		/*鼠标移出*/
+         		$('.myjingdong_top .mfooter .tbody2 .tbox2').mouseleave(function(){
+        			$('.myjingdong_top .mfooter .tbody2  .tbox2').css('display','none');      			
+        		});
+
+        		$('.myjingdong_top .mfooter .tbody2 .tbox2').mouseleave(function(e){
+        			$('.myjingdong_top .mfooter .tbody2 .tbox2').css('display','none');        			
+        			e.stopPropagation();
+        		});
+        	})
+
+        	/*导航条消息设置*/
+        	$(function(){
+        		/*鼠标移入*/
+        		$('.myjingdong_top .mfooter .tbody3 .down3').mouseenter(function(){
+        			$('.myjingdong_top .mfooter .tbody3 .tbox3').css('display','block');
+        		});
+
+        		$('.myjingdong_top .mfooter .tbody3 .tbox3').mouseenter(function(e){
+        			$('.myjingdong_top .mfooter .tbody3 .tbox3').css('display','block');    			
+        			e.stopPropagation();
+				});
+
+        		/*鼠标移出*/
+         		$('.myjingdong_top .mfooter .tbody3 .tbox3').mouseleave(function(){
+        			$('.myjingdong_top .mfooter .tbody3  .tbox3').css('display','none');      			
+        		});
+
+        		$('.myjingdong_top .mfooter .tbody3 .tbox3').mouseleave(function(e){
+        			$('.myjingdong_top .mfooter .tbody3 .tbox3').css('display','none');        			
+        			e.stopPropagation();
+        		});
+        	})
+
+        	/*在线客服*/
+        	$(function(){
+        		/*鼠标移入*/
+        		$('.myjingdong_top .rbox').mouseenter(function(){
+        			$('.myjingdong_top .rbox').css('background','#cf1420');
+        			$('.myjingdong_top .zbox').css('display','block');
+        		});
+
+        		$('.myjingdong_top .rbox').mouseenter(function(e){
+        			$('.myjingdong_top .rbox').css('background','#e2231a');
+        			$('.myjingdong_top .zbox').css('display','block');  			
+        			e.stopPropagation();
+				});
+
+        		/*鼠标移出*/
+         		$('.myjingdong_top .zbox').mouseleave(function(){
+        			$('.myjingdong_top .rbox').css('background','#7a6e6e');
+        			$('.myjingdong_top .zbox').css('display','none');      			
+        		});
+
+        		$('.myjingdong_top .zbox').mouseleave(function(e){
+        			$('.myjingdong_top .rbox').css('background','#7a6e6e');
+        			$('.myjingdong_top .zbox').css('display','none');          			
+        			e.stopPropagation();
+        		});
+        	})
+      
+      		/*二维码*/
+        	$(function(){
+        		/*鼠标移入*/
+        		$('.myjingdong_top .wbox').mouseenter(function(){
+        			$('.myjingdong_top .mbox').css('display','block');
+        		});
+
+        		$('.myjingdong_top .wbox').mouseenter(function(e){
+        			$('.myjingdong_top .mbox').css('display','block');  			
+        			e.stopPropagation();
+				});
+
+        		/*鼠标移出*/
+         		$('.myjingdong_top .mbox').mouseleave(function(){
+        			$('.myjingdong_top .mbox').css('display','none');      			
+        		});
+
+        		$('.myjingdong_top .mbox').mouseleave(function(e){
+        			$('.myjingdong_top .mbox').css('display','none');          			
+        			e.stopPropagation();
+        		});
+        	})
+        	
+        	$(function(){
+        		$('.myjingdong_top .mbox li a').click(function(){
+        			$('.myjingdong_top .mbox').css('display','none');
+	        		return false;
+        		});
+        	})
+        	/*顶部*/
+        	$(function(){
+        		/*鼠标移入*/
+        		$('.myjingdong_top .dbox').mouseenter(function(){
+        			$('.myjingdong_top .dbox').css('background','#cf1420');
+        			$('.myjingdong_top .xbox').css('display','block');
+        		});
+
+        		$('.myjingdong_top .dbox').mouseenter(function(e){
+        			$('.myjingdong_top .dbox').css('background','#cf1420');
+        			$('.myjingdong_top .xbox').css('display','block');  			
+        			e.stopPropagation();
+				});
+
+        		/*鼠标移出*/
+         		$('.myjingdong_top .xbox').mouseleave(function(){
+        			$('.myjingdong_top .dbox').css('background','#7a6e6e');
+        			$('.myjingdong_top .xbox').css('display','none');      			
+        		});
+
+        		$('.myjingdong_top .xbox').mouseleave(function(e){
+        			$('.myjingdong_top .dbox').css('background','#7a6e6e');
+        			$('.myjingdong_top .xbox').css('display','none');          			
+        			e.stopPropagation();
+        		});
+        	}) 
+
+        	/*问卷调查*/
+        	$(function(){
+        		/*鼠标移入*/
+        		$('.myjingdong_top .jbox').mouseenter(function(){
+        			$('.myjingdong_top .jbox').css('background','#cf1420');
+        			$('.myjingdong_top .cbox').css('display','block');
+        		});
+
+        		$('.myjingdong_top .jbox').mouseenter(function(e){
+        			$('.myjingdong_top .jbox').css('background','#cf1420');
+        			$('.myjingdong_top .cbox').css('display','block');  			
+        			e.stopPropagation();
+				});
+
+        		/*鼠标移出*/
+         		$('.myjingdong_top .cbox').mouseleave(function(){
+        			$('.myjingdong_top .jbox').css('background','#7a6e6e');
+        			$('.myjingdong_top .cbox').css('display','none');      			
+        		});
+
+        		$('.myjingdong_top .cbox').mouseleave(function(e){
+        			$('.myjingdong_top .jbox').css('background','#7a6e6e');
+        			$('.myjingdong_top .cbox').css('display','none');          			
+        			e.stopPropagation();
+        		});
+        	})
+        	$(function(){
+        		$('.myjingdong_body .textbox1').hide();
+        		$('.myjingdong_body .textbox2').hide();
+        		$('.myjingdong_body .textbox3').hide();
+				$('.myjingdong_body .textbox4').hide();
+
+				// textbox1
+        		$('.myjingdong_body .footer2 .gengduo').mouseenter(function(){
+        			$('.myjingdong_body .textbox1').css('display','block');
+
+        		});
+        		$('.myjingdong_body .footer2 .textbox1').mouseenter(function(e){
+        			$('.myjingdong_body .textbox1').css('display','block');
+        			e.stopPropagation();
+        		});
+        		$('.myjingdong_body .footer2 .textbox1').mouseleave(function(e){
+        			$('.myjingdong_body .textbox1').css('display','none');
+        			e.stopPropagation();
+        		});
+       			$('.myjingdong_body .footer2 .gengduo').mouseleave(function(){
+        			$('.myjingdong_body .textbox1').css('display','none');
+        			
+        		}); 
+
+       			// textbox2
+         		$('.myjingdong_body .footer4 .gengduo').mouseenter(function(){
+        			$('.myjingdong_body .textbox2').css('display','block');
+
+        		});
+        		$('.myjingdong_body .footer4 .textbox2').mouseenter(function(e){
+        			$('.myjingdong_body .textbox2').css('display','block');
+        			e.stopPropagation();
+        		});
+        		$('.myjingdong_body .footer4 .textbox2').mouseleave(function(e){
+        			$('.myjingdong_body .textbox2').css('display','none');
+        			e.stopPropagation();
+        		});
+       			$('.myjingdong_body .footer4 .gengduo').mouseleave(function(){
+        			$('.myjingdong_body .textbox2').css('display','none');
+        		});       			
+
+        		// textbox3
+         		$('.myjingdong_body .footer5 .gengduo').mouseenter(function(){
+        			$('.myjingdong_body .textbox3').css('display','block');
+
+        		});
+        		$('.myjingdong_body .footer5 .textbox3').mouseenter(function(e){
+        			$('.myjingdong_body .textbox3').css('display','block');
+        			e.stopPropagation();
+        		});
+        		$('.myjingdong_body .footer5 .textbox3').mouseleave(function(e){
+        			$('.myjingdong_body .textbox3').css('display','none');
+        			e.stopPropagation();
+        		});
+       			$('.myjingdong_body .footer5 .gengduo').mouseleave(function(){
+        			$('.myjingdong_body .textbox3').css('display','none');
+        		}); 
+
+    			// textbox4       	
+         		$('.myjingdong_body .footer6 .gengduo').mouseenter(function(){
+        			$('.myjingdong_body .textbox4').css('display','block');
+
+        		});
+        		$('.myjingdong_body .footer6 .textbox4').mouseenter(function(e){
+        			$('.myjingdong_body .textbox4').css('display','block');
+        			e.stopPropagation();
+        		});
+        		$('.myjingdong_body .footer6 .textbox4').mouseleave(function(e){
+        			$('.myjingdong_body .textbox4').css('display','none');
+        			e.stopPropagation();
+        		});
+       			$('.myjingdong_body .footer6 .gengduo').mouseleave(function(){
+        			$('.myjingdong_body .textbox4').css('display','none');
+        		});	        		      		      		    		
+        	})
+
+        	$(function(){
+        		$('.ft1').mouseenter(function(){
+        			$('.ft1').css('background','#ffffff');
+        			$('.ft1 .a1').css('color','#e2231a');
+        		});
+
+        		$('.ft2').mouseenter(function(){
+        			$('.ft2').css('background','#ffffff');
+        			$('.ft2 .a2').css('color','#e2231a');
+        		});
+
+        		$('.ft1').mouseleave(function(){
+        			$('.ft1').css('background','#e2231a');
+        			$('.ft1 .a1').css('color','#ffffff');
+        		}); 
+
+        		$('.ft2').mouseleave(function(){
+        			$('.ft2').css('background','#e2231a');
+        			$('.ft2 .a2').css('color','#ffffff');
+        		}); 
+
+        	})
+
+        	$(function(){
+        		$('.myjingdong_body .right .footer1 p').css('display','none');
+        		$('.myjingdong_body .right .footer1 span').mouseenter(function(){
+        			$('.myjingdong_body .right .footer1 p').css('display','block');
+        		});
+        		$('.myjingdong_body .right .footer1 span').mouseleave(function(){
+        			$('.myjingdong_body .right .footer1 p').css('display','none');
+        		});
+        	})
+
+         	$(function(){
+         		$('.myjingdong_body .right .footer5 .box1 .lis1 .a2').mouseenter(function(){
+         			$('.myjingdong_body .right .footer5 .box1 .lis1 .a1').css('color','#e2231a');
+         		});
+
+         		$('.myjingdong_body .right .footer5 .box1 .lis2 .a2').mouseenter(function(){
+         			$('.myjingdong_body .right .footer5 .box1 .lis2 .a1').css('color','#e2231a');
+         		});
+
+         		$('.myjingdong_body .right .footer5 .box1 .lis3 .a2').mouseenter(function(){
+         			$('.myjingdong_body .right .footer5 .box1 .lis3 .a1').css('color','#e2231a');
+         		});
+
+         		$('.myjingdong_body .right .footer6 .plus3').mouseenter(function(){
+         			$('.myjingdong_body .right .footer6 .plus3').css('background','#ffffff');
+         			$('.myjingdong_body .right .footer6 .plus4').css('color','#2c2e40');
+         		});
+
+         		$('.myjingdong_body .right .footer5 .box1 .lis1 .a2').mouseleave(function(){
+         			$('.myjingdong_body .right .footer5 .box1 .lis1 .a1').css('color','#666666');
+         		}); 
+
+         		$('.myjingdong_body .right .footer5 .box1 .lis2 .a2').mouseleave(function(){
+         			$('.myjingdong_body .right .footer5 .box1 .lis2 .a1').css('color','#666666');
+         		}); 
+
+         		$('.myjingdong_body .right .footer5 .box1 .lis3 .a2').mouseleave(function(){
+         			$('.myjingdong_body .right .footer5 .box1 .lis3 .a1').css('color','#666666');
+         		});
+
+         		$('.myjingdong_body .right .footer6 .plus3').mouseleave(function(){
+         			$('.myjingdong_body .right .footer6 .plus3').css('background','#2c2e40');
+         			$('.myjingdong_body .right .footer6 .plus4').css('color','#f5ca3a');
+         		});
+         	})
+
+         	/*浏览记录轮播图*/
+			var i=0;
+        	var Timer;
+        	$(function(){
+        		$('.lunbotu1').eq(0).show().siblings().hide();
+        		TimerBanner();
+
+        		$('.tabs li').hover(function(){
+        			clearInterval(Timer);
+        			i=$(this).index();
+        			showPic();
+        		},function(){
+        			TimerBanner();
+        		});
+        		$('.btn1').click(function(){
+        			clearInterval(Timer);
+        			i--;
+        			if(i==-1){
+        				i=3;
+        			}
+        			showPic();
+        			TimerBanner();
+        		});
+        		$('.btn2').click(function(){
+        			clearInterval(Timer);
+        			i++;
+        			if(i==4){
+        				i=0;
+        			}
+        			showPic();
+        			TimerBanner();
+        		});
+        	})
+        	function TimerBanner(){
+        		Timer=setInterval(function(){
+        			i++;
+        			if(i==4){
+        				i=0;
+        			}
+        			showPic();
+        		},2000);
+        	}
+        	function showPic(){
+        		$('.lunbotu1').eq(i).show().siblings().hide();
+        		$('.tabs li').eq(i).addClass('bg').siblings().removeClass('bg');
+        	}
+
+        	/*PLUS尊享轮播图*/
+			var i2=0;
+        	var Timer2;
+        	$(function(){
+        		$('.lunbotu2').eq(1).hide();
+        		$('.lunbotu2').eq(2).hide();
+        		$('.lunbotu2').eq(3).hide();
+        		$('.lunbotu2').eq(0).show().siblings().hide();
+        		TimerBanner2();
+
+        		$('.tabs2 li').hover(function(){
+        			clearInterval(Timer2);
+        			i2=$(this).index();
+        			showPic2();
+        		},function(){
+        			TimerBanner2();
+        		});
+        		$('.btn3').click(function(){
+        			clearInterval(Timer2);
+        			i2--;
+        			if(i2==-1){
+        				i2=3;
+        			}
+        			showPic2();
+        			TimerBanner2();
+        		});
+        		$('.btn4').click(function(){
+        			clearInterval(Timer2);
+        			i2++;
+        			if(i2==4){
+        				i2=0;
+        			}
+        			showPic2();
+        			TimerBanner2();
+        		});
+        	})
+        	function TimerBanner2(){
+        		Timer2=setInterval(function(){
+        			i2++;
+        			if(i2==4){
+        				i2=0;
+        			}
+        			showPic2();
+        		},2000);
+        	}
+        	function showPic2(){
+        		$('.lunbotu2').eq(i2).show().siblings().hide();
+        		$('.tabs2 li').eq(i2).addClass('bg2').siblings().removeClass('bg2');
+        	}
+
+        	/*待付款*/
+        	$(function(){
+        		$('.myjingdong_body .right .footer5 .sltb1 .dfk').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb1 .daifukuan').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb1 .dfk').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb1 .daifukuan').css('color','#2f0000');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb1 .daifukuan').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb1 .daifukuan').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb1 .daifukuan').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb1 .daifukuan').css('color','#2f0000');
+        		});
+        	})
+
+        	/*待收货*/
+        	$(function(){
+        		$('.myjingdong_body .right .footer5 .sltb2 .dsh').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb2 .daishouhuo').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb2 .dsh').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb2 .daishouhuo').css('color','#2f0000');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb2 .daishouhuo').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb2 .daishouhuo').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb2 .daishouhuo').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb2 .daishouhuo').css('color','#2f0000');
+        		});
+        	})
+
+        	/*待评价*/
+        	$(function(){
+        		$('.myjingdong_body .right .footer5 .sltb3 .dpj').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb3 .daipingjia01').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb3 .dpj').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb3 .daipingjia01').css('color','#2f0000');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb3 .daipingjia01').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb3 .daipingjia01').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb3 .daipingjia01').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb3 .daipingjia01').css('color','#2f0000');
+        		});
+        	})
+
+        	/*退换/售后*/
+        	$(function(){
+        		$('.myjingdong_body .right .footer5 .sltb4 .dth').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb4 .tuihuan').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb4 .dth').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb4 .tuihuan').css('color','#2f0000');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb4 .tuihuan').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb4 .tuihuan').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb4 .tuihuan').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb4 .tuihuan').css('color','#2f0000');
+        		});
+        	})
+
+        	/*全部订单*/
+        	$(function(){
+        		$('.myjingdong_body .right .footer5 .sltb5 .qbd').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb5 .qbdd').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb5 .qbd').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb5 .qbdd').css('color','#2f0000');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb5 .qbdd').mouseenter(function(){
+        			$('.myjingdong_body .right .footer5 .sltb5 .qbdd').css('color','#c91423');
+        		});
+        		$('.myjingdong_body .right .footer5 .sltb5 .qbdd').mouseleave(function(){
+        			$('.myjingdong_body .right .footer5 .sltb5 .qbdd').css('color','#2f0000');
+        		});
+        	})
+
+        	$(function(){
+        		$('.myjingdong_top .mfooter .tbody4').mouseenter(function(){
+        			$('.myjingdong_top .mfooter .tbody4 .ac').css('display','block');
+        		});
+         		$('.myjingdong_top .mfooter .tbody4').mouseleave(function(){
+        			$('.myjingdong_top .mfooter .tbody4 .ac').css('display','none');
+        		});
+          		$('.myjingdong_top .mfooter .tbody4').mouseenter(function(){
+        			$('.myjingdong_top .mfooter .tbody4 .ac').css('display','block');
+        			return false;
+        		});
+         		$('.myjingdong_top .mfooter .tbody4').mouseleave(function(){
+        			$('.myjingdong_top .mfooter .tbody4 .ac').css('display','none');
+        			return false;
+        		});      		       		
+        	})
+
+
+        </script>
+    </head>
+    <body style="min-width: 200px;">
+    	<div class="myjingdong_top">
+			
+			<!-- 头部 -->
+    		<div class="mtop">
+<!-- 头部导航 -->
+        <div class="container top">
+            <!-- 定位 -->
+            <div class="top_location">
+            	<a href="../index.html" class="shouye"><p>京东首页</p></a>
+				<a href="" class="sy"><span class="iconfont icon-shouyezhuyezhuomian1000"></span></a>
+
+                <span class="iconfont icon-dingwei c_location"></span>
+                <p class="guangdong">广东</p>
+                <div class="top_location_display">
+                    <ul class="top_location_li" style="list-style:none">
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>天津</li>
+                        <li>重庆</li>
+                        <li>河北</li>
+                        <li>山西</li>
+                        <li>河南</li>
+                        <li>辽宁</li>
+                        <li>吉林</li>
+                        <li>黑龙江</li>
+                        <li>内蒙古</li>
+                        <li>江苏</li>
+                        <li>山东</li>
+                        <li>安徽</li>
+                        <li>浙江</li>
+                        <li>福建</li>
+                        <li>湖北</li>
+                        <li>湖南</li>
+                        <li>广东</li>
+                        <li>广西</li>
+                    </ul>
+                    <div class="line1"></div>
+                    <p class="display_p" style="color:#999999;margin-left:20px;font-size: 13px;margin-top: 5px;">地区专享版本<br><br>中国港澳</p>
+                    <div class="line2"></div>
+                    <span class="iconfont icon-global c_global"></span>
+                    <p style="margin-left:50px;margin-top: 30px;font-size:15px;color:#999999;margin-left:20px;margin-top:15px">Available Sites</p>
+                    <p class="globalsite" style="margin-left:50px;margin-top: 13px;font-size:15px;color:#999999">全球网站</p>
+                    <span class="iconfont icon-aodaliya c_australia"></span>
+                    <p class="australia" style="margin-left:185px;margin-top: -20px;font-size:15px;color:#999999">澳大利亚</p>
+                </div>
+            </div>
+            
+            <!-- 登录和注册 -->
+            <a href="" class="top_enter">何洛洛yn PLUS</a>    
+            <!-- <a href="" class="top_register">免费注册</a> -->
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:682px;top:13px"></div>
+            
+            <!-- 我的订单 -->
+            <a href="" class="top_myform">我的订单</a>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:753px;top:13px"></div>
+            
+            <!-- 我的京东 -->
+            <div class="top_myjd_box">
+                <a href="" class="top_myjd">我的京东</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+                <div class="top_myjd_display">
+                    <ul class="top_myjd_ul" style="list-style:none;" >
+                        <li>待处理订单</li>
+                        <li>消息</li>
+                        <li>返修退换货</li>
+                        <li>我的回答</li>
+                        <li>降价商品</li>
+                        <li>我的关注</li>
+                        <li style="height:10px"><hr style="border:none"></li>
+                        <li style="height:10px"><hr style="border:0.5px solid #F1F1F1;width:280px;margin-left:-137px"></li>
+                        <li>我的京东</li>
+                        <li>我的优惠券</li>
+                        <li>我的白条</li>
+                        <li>我的理财</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:840px;top:13px"></div>
+
+            <!-- 京东会员 -->
+            <a href="../html/membership.html" class="top_vip">京东会员</a>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:914px;top:13px"></div>
+
+            <!-- 企业采购 -->
+            <div class="top_purchase_box">
+                <a href="../html/business_buy.html" class="top_purchase">企业采购</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+                <div class="top_purchase_display">
+                    <ul class="top_purchase_ul" style="list-style:none;" >
+                        <li>企业购</li>
+                        <li>商用场景馆</li>
+                        <li>工业品</li>
+                        <li>礼品卡</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:1000px;top:13px"></div>
+            
+            <!-- 客户服务 -->
+            <div class="top_service_box">
+                <a href="" class="top_service">客户服务</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:78px;top:13px"></div>
+            </div>
+            <!-- 网站导航 -->
+            <div class="top_navigation_box">
+                <a href="" class="top_navigation">网站导航</a>
+                <span class="iconfont icon-jiantou top_arrows"></span>
+            <div style="position: absolute;width:1px;height: 10px;background: #CCCCCC;left:77px;top:13px"></div>
+            </div>
+            <!-- 手机京东 -->
+            <a href="" class="top_phonejd">手机京东</a>
+        </div>
+        <!-- 头部导航 -->    			
+	
+    		</div>
+			<!-- 中部 -->
+			<!-- 在线客服图标 -->
+			<div class="rbox">
+				<a href=""><span class="iconfont icon-zaixiankefu kefu"></span></a>
+			</div>
+			<div class="zbox">
+				<p class="p1"><a href="">在线客服</a></p>
+			</div>			
+
+			<!-- 二维码 -->
+			<div class="wbox">
+				<a href=""><span class="iconfont icon-ico ico"></span></a>
+			</div>
+			<div class="mbox">
+				<p>使用京东APP<br>搜索我的京东</p>
+				<li><a href="">X</a></li>
+				<img src="../img/n33_img.jpg" alt="">
+			</div>	
+
+			<!-- 顶部小图标 -->
+			<div class="dbox">
+				<a href=""><span class="iconfont icon-huidaodingbu db"></span></a>
+			</div>
+			<div class="xbox">
+				<p class="p1"><a href="">顶部</a></p>
+			</div>		
+
+			<!-- 问卷调查 -->
+			<div class="jbox">
+				<a href=""><span class="iconfont icon-tiaochawenjuan dc"></span></a>
+			</div>
+			<div class="cbox">
+				<p class="p1"><a href="">调查问卷</a></p>
+			</div>	
+
+			<div class="mfooter">
+				<a href=""><img src="../img/n32_img.PNG" alt="" class="img"></a>
+                <!-- <img src="../img/n32_img.PNG" alt=""> -->
+				<!-- <a href=""><span class="iconfont icon-jingdonglogo logo"></span></a> -->
+				<h1 class="logo">京东</h1>
+				<h3 class="h3">我的京东</h3>	
+
+				<div class="tbody1">
+					<span class="text">首页</span>
+					<span class="iconfont icon-iconset0417 down"></span>
+					<div class="tbox1">
+						<ul>
+							<a href=""><li>订单中心</li></a>
+							<a href=""><li>我的钱包</li></a>
+							<a href=""><li>我的关注</li></a>
+							<a href=""><li>我的活动</li></a>
+							<a href=""><li>客户服务</li></a>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tbody2">
+					<span class="text2">账户设置</span>
+					<span class="iconfont icon-iconset0417 down2"></span>
+					<div class="tbox2">
+						<ul class="uls1">
+							<a href=""><li>个人信息</li></a>
+							<a href=""><li>账户安全</li></a>
+							<a href=""><li>收货地址</li></a>
+							<a href=""><li>我的银行卡</li></a>
+							<a href=""><li>账号绑定</li></a>
+						</ul>
+						<ul class="uls2">
+							<a href=""><li>分享绑定</li></a>
+							<a href=""><li>我的尺码</li></a>
+							<a href=""><li>健康档案</li></a>
+							<a href=""><li>邮件订阅</li></a>
+							<a href=""><li>授权管理</li></a>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tbody3">
+					<span class="text3">消息</span>
+					<span class="iconfont icon-iconset0417 down3"></span>
+					<div class="tbox3">
+						<ul class="uls3">
+						<a href=""><li>系统消息</li></a>
+						<a href=""><li>消息设置</li></a>
+						</ul>
+					</div>
+
+				</div>	
+				<input type="text" placeholder="&nbsp;满天星" class="inp">
+				<a href=""><button class="btn">搜索</button></a>
+
+				<div class="tbody4">
+					<span class="iconfont icon-gouwuche"></span>
+					<a href="..//html/shopping.html">我的购物车</a>
+					<div class="value"><p>4</p></div>
+
+					<div class="ac">
+					<p class="ac_p1">最近加入的商品</p>
+					<img src="../img/n50_img.jpg" alt="">
+					<p class="ac_p2">永生花 玫瑰鲜花礼盒 <br> 满天星干花大花束...</p>
+					<p class="ac_p3">￥128.00 X 1</p>
+					<a href="" class="ac_p4">删除</a>
+
+					<div class="aa_01">
+						<li>共4件商品 共计￥0.00</li>
+						<a href=""><button>去购物车</button></a>
+					</div>
+				</div>
+				</div>
+
+				</div>
+    	</div>
+    	<div class="myjingdong_body">
+    		<div class="left" id="left">
+    			<div class="footer1">
+	     			<ul class="uls1">
+	    				<h4>订单中心</h4>
+	    				<li><a href="">我的订单</a></li>
+	    				<li><a href="">评价晒单</a></li>
+	    				<p class="line"></p>
+	    			</ul>   				
+    			</div>
+
+				<div class="footer2">
+					<ul class="uls2">
+						<h4>我的钱包</h4>
+						<li><a href="">优惠券</a></li>
+						<li><a href="">京豆</a></li>
+						<li><a href="">白条</a></li>
+						<li><a href="">红包</a></li>
+						<li><a href="">银行卡</a></li>
+						<li class="gengduo"><a href="">更多 &gt;</a></li>
+						<p class="line"></p>
+					</ul>	
+					<div class="textbox1">
+						<li><a href="">礼品卡</a></li>
+						<li><a href="">小金库</a></li>
+						<li><a href="">余额</a></li>
+						<li><a href="">钢镚</a></li>
+						<li><a href="">领货码</a></li>
+					</div>				
+				</div>
+
+				<div class="footer3">
+	    			<ul class="uls3">
+	    				<h4>我的关注</h4>
+	    				<li><a href="">关注商品</a></li>
+	    				<li><a href="">关注店铺</a></li>
+	    				<li><a href="">内容收藏</a></li>
+	    				<p class="line"></p>
+	    			</ul>					
+				</div>
+
+				<div class="footer4">
+	    			<ul class="uls4">
+	    				<h4>我的活动</h4>
+	    				<li><a href="">我的预约</a></li>
+	    				<li><a href="">我的拍卖</a></li>
+	    				<li><a href="">我的回执单</a></li>
+	    				<li><a href="">我的必购码</a></li>
+	    				<li><a href="">我的口令</a></li>
+	    				<li class="gengduo"><a href="">更多 &gt;</a></li>
+	    				<p class="line"></p>
+	    			</ul>	
+					<div class="textbox2">
+						<li><a href="">我的试用</a></li>
+						<li><a href="">装修服务</a></li>
+						<li><a href="">我的订购期</a></li>
+						<li><a href="">我的常购商品</a></li>
+						<li><a href="">代下单</a></li>
+						<li><a href="">我的问答</a></li>
+						<li><a href="">我的集运</a></li>
+						<li><a href="">我的课程</a></li>
+					</div>		    							
+				</div>
+
+				<div class="footer5">
+	    			<ul class="uls5">
+	    				<h4>客户服务</h4>
+	    				<li><a href="">返修退换货</a></li>
+	    				<li><a href="">价格保护</a></li>
+	    				<li><a href="">我的发票</a></li>
+	    				<li><a href="">购买咨询</a></li>
+	    				<li><a href="">交易纠纷</a></li>
+	    				<li class="gengduo"><a href="">更多 &gt;</a></li>
+	    				<p class="line"></p>
+	    			</ul>	
+						<div class="textbox3">
+							<li><a href="">京东维修</a></li>
+							<li><a href="">上门服务预约</a></li>
+							<li><a href="">举报中心</a></li>
+							<li><a href="">意见建议</a></li>
+						</div>					
+				</div>
+
+				<div class="footer6">
+	    			<ul class="uls6">
+	    				<h4>特色业务</h4>
+	    				<li><a href="">我的营业厅</a></li>
+	    				<li><a href="">京东通信</a></li>
+	    				<li><a href="">节能补贴</a></li>
+	    				<li><a href="">医疗服务</a></li>
+	    				<li><a href="">流量加油站</a></li>
+	    				<li class="gengduo"><a href="">更多 &gt;</a></li>
+	    			</ul>
+					<div class="textbox4">
+						<li><a href="">海外房产预约</a></li>
+						<li><a href="">我的海囤全球</a></li>
+						<li><a href="">京东质造</a></li>
+						<li><a href="">智能客服</a></li>
+						<li><a href="">耗材自动递送</a></li>
+						<li><a href="">京东机票</a></li>
+					</div>		    								
+				</div>
+    		</div>
+    		<div class="right" id="right">
+    			<div class="footer1">
+    				<span class="iconfont icon-attention"></span>
+    				<p>隐藏金额</p>
+    			</div>
+    			<div class="footer2">
+    				<p class="p1">JD COM</p>
+    				<img src="../img/n01_img.jpg" alt="">
+    				<h4>何洛洛yn</h4>
+
+    				<div class="ft1">
+	      				<a href="" class="a1">京享值202</a> 					
+    				</div>
+
+					<div class="ft2">
+	    				<a href="" class="a2">信用领10元券</a> 						
+					</div>
+
+					<div class="footer3">
+						<div class="a3">
+							<p>开通PLUS会员尊享</p>
+							<span>全年360元运费券礼包</span>							
+						</div>
+
+						<div class="a4"><a href="">立即开通</a></div>
+					</div>
+    			</div>
+    			<div class="footer4">
+    				<p class="p1">我的钱包</p>
+    				<p class="line"></p>
+    				<ul>
+	    				<li class="lis1">
+							<p class="li1">0</p>
+							<p class="lli1">优惠券</p>
+							<a href="">领券</a>
+	    				</li>
+
+	    				<li class="lis2">
+							<p class="li2">0</p>
+							<p class="lli2">京豆</p>
+							<a href="">赚京豆</a>	    					
+	    				</li>
+
+	    				<li class="lis3">
+							<p class="li3">0.00</p>
+							<p class="lli3">余额</p>
+							<a href="">充值</a>	    					
+	    				</li>
+
+	    				<li class="lis4">
+							<p class="line"></p>
+							<p class="lli4">暂未开通白条</p>
+							<a href="">开通</a>		    					
+	    				</li>
+
+	    				<li class="lis5">
+							<p class="li5">0.00</p>
+							<p class="lli5">小金库昨日收益</p>
+							<a href="">转入小金库，马上赚钱</a>		    					
+	    				</li>    					
+    				</ul>
+    			</div>
+
+    			<div class="footer5">
+    				<p class="p1">我的订单</p>
+    				<p class="line"></p>
+
+    				<div class="sltb1">
+						<a href="" class="a1">
+							<span class="iconfont icon-wodedaifukuan daifukuan"></span>
+							<p class="dfk">代付款</p> 							
+						</a>  					
+    				</div>
+
+					<div class="sltb2">
+						<a href="" class="a2">
+							<span class="iconfont icon-daishouhuo daishouhuo"></span>
+							<p class="dsh">待收货</p>							
+						</a>						
+					</div>
+
+					<div class="sltb3">
+					<a href="" class="a3">
+						<span class="iconfont icon-wodexiaoxiicon daipingjia01"></span>
+						<p class="dpj">待评价</p>						
+					</a>							
+					</div>
+				
+					<div class="sltb4">
+					<a href="" class="a4">
+						<span class="iconfont icon-3tuihuanhuozhengcegouxuan tuihuan"></span>
+						<p class="dth">退换/售后</p>							
+					</a>					
+					</div>
+
+					<div class="sltb5">
+					<a href="" class="a5">
+						<span class="iconfont icon-weibiaoti2fuzhi07 qbdd"></span>
+						<p class="qbd">全部订单</p>							
+					</a>					
+					</div>
+					
+					<div class="sltb6">
+						<span class="iconfont icon-gouwuche gwc"></span>
+						<p class="gw">您买的东西太少了,这里都空空的，快去挑选合适的商品吧！</p>
+					</div>
+
+    				<div class="box1">
+						<p class="t1">我的关注</p>
+						<p class="line"></p>
+	    				<ul>
+	    					<li class="lis1">
+	    						<a href="" class="a1">0</a>
+	    						<p href="" class="a2">商品关注</p>		    						
+	    					</li>
+
+	    					<li class="lis2">
+	    						<a href="" class="a1">0</a>
+	    						<p href="" class="a2">店铺关注</p>
+	    					</li>
+	    					<li class="lis3">
+	    						<a href="" class="a1">0</a>
+	    						<p href="" class="a2">收藏</p>
+	    					</li>
+	    				</ul>
+    				</div>
+					
+					<!-- 浏览记录轮播图 -->
+    				<div class="box2">
+ 						<p class="t1">浏览记录</p>
+						<p class="t2">更多&gt;</p>  
+						<p class="line"></p>
+
+						<div class="pic1">
+							<div class="lunbotu1"><a href=""><img src="../img/n17_img.jpg" alt=""></a></div>
+							<div class="lunbotu1"><a href=""><img src="../img/n18_img.jpg" alt=""></a></div>
+							<div class="lunbotu1"><a href=""><img src="../img/n19_img.jpg" alt=""></a></div>
+							<div class="lunbotu1"><a href=""><img src="../img/n20_img.jpg" alt=""></a></div>
+						</div>
+						
+						<ul class="tabs">
+							<li class="bg"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+			            <div class="btn btn1">&lt;</div>
+			            <div class="btn btn2">&gt;</div>						
+    				</div>
+
+    				<!-- 生活服务轮播图 -->
+    				<div class="box3">
+    					<p class="p1">生活服务</p>
+    					<p class="line"></p>
+						<div class="lunbotu2">
+
+							<div class="div1">
+								<ul class="uls1">
+			    					<li class="lis1">
+			    					<a href="" class="a1">
+										<span class="iconfont icon-huafei hf"></span>
+										<p class="huaf">话费</p>				    						
+			    					</a>		    						
+			    					</li>
+
+			    					<li class="lis2">
+			    						<a href="" class="a2">
+											<span class="iconfont icon-jipiao jp"></span>
+											<p class="jipiao">机票</p>				    						
+			    						</a>			    						
+			    					</li>
+
+			    					<li class="lis3">
+			    						<a href="" class="a1">
+											<span class="iconfont icon-jiudian jd"></span>
+											<p class="jiud">酒店</p>				    						
+			    						</a>			    						
+			    					</li>							
+								</ul>
+
+								<ul class="uls2">
+									<li class="llis1">
+			    						<a href="" class="a1">
+											<span class="iconfont icon-qiye qyg"></span>
+											<p class="qiyeg">企业购</p>				    						
+			    						</a>										
+									</li>
+
+									<li class="llis2">
+			    						<a href="" class="a2">
+											<span class="iconfont icon-jiayouqia jyk"></span>
+											<p class="jiayk">加油卡</p>				    						
+			    						</a>										
+									</li>
+
+									<li class="llis3">
+			    						<a href="" class="a3">
+											<span class="iconfont icon-airudiantubiaohuizhi-zhuanqu_dianyingpiao dyp"></span>
+											<p class="dianyp">电影票</p>				    						
+			    						</a>										
+									</li>								
+								</ul>								
+							</div>
+
+						</div>
+
+    				</div>
+    			</div>
+
+    			<div class="footer6">
+    				<h1 class="plus1">PLUS ENJOY</h1>
+    				<h4 class="plus2">PLUS尊享</h4>
+    				<div class="plus3"><a href="" class="plus4">开通PLUS会员&gt;</a></div>
+					<div class="plus5">
+						<div class="lunbotu2"><a href=""><img src="../img/n21_img.jpg" alt=""></a></div>
+						<div class="lunbotu2"><a href=""><img src="../img/n22_img.jpg" alt=""></a></div>
+						<div class="lunbotu2"><a href=""><img src="../img/n23_img.jpg" alt=""></a></div>
+						<div class="lunbotu2"><a href=""><img src="../img/n24_img.jpg" alt=""></a></div>									
+					</div>
+					<ul class="tabs2">
+						<li class="bg2"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>	
+		            <div class="btn btn3">&lt;</div>
+		            <div class="btn btn4">&gt;</div>					
+    			</div>
+
+    			<div class="footer7">
+    				<h3 class="h3">买什么</h3>
+    				<h5 class="h5">看看达人们都在买的商品</h5>
+    				<a href="" class="a1">更多&gt;</a>
+					
+    				<div class="mfooter1">
+    					<p class="tp1">如何带着妹子去吃鸡？</p>
+    					<a href="" class="ta1">
+							<span class="iconfont icon-baitiao bt"></span>
+							<p class="st">五个橙子的故事5</p>
+
+							<span class="iconfont icon-iconfontzhizuobiaozhun44 dz"></span>
+							<p class="sz">2255</p>	
+
+							<span class="iconfont icon-shoucang shc"></span>
+							<p class="sc">1410</p>	
+    					</a>
+						<div class="dt1">
+							<a href=""><img src="../img/n26_img.webp.jpg" alt=""></a>
+						</div>
+						<div class="dt2">
+							<a href=""><img src="../img/n27_img.webp.jpg" alt=""></a>
+							<a href=""><img src="../img/n28_img.webp.jpg" alt=""></a>
+						</div>
+    				</div>
+    				<div class="mfooter2">
+    					<p class="tp2">禅茶</p>
+    					<a href="" class="ta2">
+							<span class="iconfont icon-baitiao bt2"></span>
+							<p class="st2">不入魔不成仙</p>
+
+							<span class="iconfont icon-iconfontzhizuobiaozhun44 dz2"></span>
+							<p class="sz2">1196</p>	
+
+							<span class="iconfont icon-shoucang shc2"></span>
+							<p class="sc2">2</p>	
+    					</a>
+						<div class="dt3">
+							<a href=""><img src="../img/n29_img.webp.jpg" alt=""></a>
+						</div>
+						<div class="dt4">
+							<a href=""><img src="../img/n30_img.webp.jpg" alt=""></a>
+							<a href=""><img src="../img/n31_img.webp.jpg" alt=""></a>
+						</div>    					
+
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	
+    	<div class="myjingdong_footer">
+
+<!-- 首页最底部 -->
+    	<div class="container bottom">
+    		<div class="bottom_a">
+    			<ul class="bottom_a_ul">
+    				<li>
+    					<span class="bottom_a_01"></span>
+    					<p class="bottom_p_01">品类齐全，轻松购物</p>
+    				</li>
+    				<li>
+
+    					<span class="bottom_a_02"></span>
+    					<p class="bottom_p_02">多仓直发，极速配送</p>
+    				</li>
+    				<li>
+
+    					<span class="bottom_a_03"></span>
+    					<p class="bottom_p_03">正品行货，精致服务</p>
+    				</li>
+    				<li>
+    					<span class="bottom_a_04"></span>
+    					<p class="bottom_p_04">天天低价，畅选无忧</p>
+    				</li>
+    			</ul>
+    		</div>
+    		<div class="bottom_b">
+    			<ul class="bottom_b_ul">
+    				<li class="bottom_b_li">
+    					<h1>购物指南</h1>
+    					<p>会员介绍</p>
+    					<p>生活旅行/团购</p>
+    					<p>常见问题</p>
+    					<p>大家电</p>
+    					<p>联系客服</p>
+    				</li>
+    				<li class="bottom_b_li">
+    					<h1>配送方式</h1>
+    					<p>上门自提</p>
+    					<p>211限时达</p>
+    					<p>配送服务查询</p>
+    					<p>配送费收取标准</p>
+    					<p>海外配送</p>
+    				</li>
+    				<li class="bottom_b_li">
+    					<h1>支付方式</h1>
+    					<p>货到付款</p>
+    					<p>在线支付</p>
+    					<p>分期付款</p>
+    					<p>邮局汇款</p>
+    					<p>公司转账</p>
+    				</li>
+    				<li class="bottom_b_li">
+    					<h1>售后服务</h1>
+    					<p>售后政策</p>
+    					<p>价格保护</p>
+    					<p>退款说明</p>
+    					<p>返修/退换货</p>
+    					<p>取消订单</p>
+    				</li>
+    				<li class="bottom_b_li">
+    					<h1>特色服务</h1>
+    					<p>夺宝岛</p>
+    					<p>DIY装机</p>
+    					<p>延保服务</p>
+    					<p>京东E卡</p>
+    					<p>京东通信</p>
+    					<p>京东座智能</p>
+    				</li>
+    			</ul>
+    		</div>
+    		<div class="bottom_c">
+    			<ul class="bottom_c_ul01">
+    				<li class="bottom_c_li">关于我们</li>
+    				<li class="bottom_c_li">联系我们</li>
+    				<li class="bottom_c_li">联系客服</li>
+    				<li class="bottom_c_li">合作招商</li>
+    				<li class="bottom_c_li">商家帮助</li>
+    				<li class="bottom_c_li">营销中心</li>
+    				<li class="bottom_c_li">手机京东</li>
+    				<li class="bottom_c_li">友情链接</li>
+    				<li class="bottom_c_li">销售联盟</li>
+    				<li class="bottom_c_li">京东社区</li>
+    				<li class="bottom_c_li">风险检测</li>
+    				<li class="bottom_c_li">隐私政策</li>
+    				<li class="bottom_c_li">京东公益</li>
+    				<li class="bottom_c_li">English Site</li>
+    				<li class="bottom_c_li" id="bottom_c_li_14">Media & IR</li>
+    			</ul>
+    			<ul class="bottom_c_ul02">
+    				<li class="bottom_c_ul02_li01">
+	    				<p>京公网安备 11000002000088号</p>
+	    				<p>京ICP证070359号</p>
+	    				<p> 互联网药品信息服务资格证编号(京)-经营性-2014-0008</p>
+	    				<p id="li01_a">新出发京零 字第大120007号</p>
+    				</li>
+    				<li class="bottom_c_ul02_li02">
+    					<p>互联网出版许可证编号新出网证(京)字150号</p>
+	    				<p>出版物经营许可证</p>
+	    				<p>网络文化经营许可证京网文[2014]2148-348号</p>
+	    				<p id="li02_a">违法和不良信息举报电话：4006561155</p>
+    				</li>
+    				<li class="bottom_c_ul02_li03">
+    					<p>Copyright © 2004 - 2019 京东JD.com 版权所有</p>
+	    				<p>消费者维权热线：4006067733</p>
+	    				<p>经营证照</p>
+	    				<p> (京)网械平台备字(2018)第00003号</p>
+	    				<p id="li03_a">营业执照</p>
+    				</li>
+    				<li class="bottom_c_ul02_li04">
+    					<span class="li04_span01"></span>
+    					<span class="li04_span02"></span>
+    					<span class="li04_span03"></span>
+    					<span class="li04_span04"></span>
+    					<span class="li04_span05"></span>
+    					<p>全球网站</p>
+	    				<p>俄罗斯</p>
+	    				<p>印度尼西亚</p>
+	    				<p>西班牙</p>
+	    				<p id="li04_a">泰国</p>
+    				</li>
+    				<li class="bottom_c_ul02_li05">
+    					<p>京东旗下网站： 京东钱包</p>
+	    				<p id="li05_a">京东云</p>
+    				</li>
+    			</ul>
+    			<ul class="bottom_c_ul03">
+    				<li>
+    					<p>可信网站<br>信用评价</p>
+    				</li>
+    				<li>
+    					<p>网络警察<br>提醒您</p>
+    				</li>
+    				<li>
+    					<p style="padding-top: 5px;">诚信网站</p>
+    				</li>
+    				<li>
+    					<p>中国互联网举报中心</p>
+    				</li>
+    				<li>
+    					<p>网络举报APP下载</p>
+    				</li>
+    				<span id="c_ul03_span01"></span>
+    				<span id="c_ul03_span02"></span>
+    				<span id="c_ul03_span03"></span>
+    				<span id="c_ul03_span04"></span>
+    				<span id="c_ul03_span05"></span>
+    			</ul>
+    		</div>
+    	</div>
+    	<!-- 首页最底部 -->
+    	</div>
+    </body>
+</html>
